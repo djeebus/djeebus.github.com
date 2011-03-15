@@ -13,7 +13,7 @@
 	],
 	"preamble": { 
 		"title": "Developer Extraordinaire",
-		"content": "I want people to look at my products and feel that they need them in their lives. I want programmers to look at my code and think, 'His kung fu is strong.' I want to be the best developer I can possibly be, and to use my power for good (and never for evil!)"
+		"content": "You want me because you're looking for a software architect who can understand the business implications of his actions. You want me because you're looking for a software architect who understands ROI and ROO. I want people to look at my products and feel that they need them in their lives. I want programmers to look at my code and think, 'His kung fu is strong.' I want to be the best developer I can possibly be, and to use my power for good (and never for evil!)"
 	},
 	"catalog": [
 		{ 
@@ -21,12 +21,13 @@
 			"skills": [
 				{ "key": "cpp", "name": "C++" },
 				{ "key": "csharp", "name": "C#", "href": "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)" },
-				{ "key": "javascript", "name": "JavaScript / ECMAScript", "href": "http://en.wikipedia.org/wiki/JavaScript" },
+				{ "key": "javascript", "name": "JavaScript", "href": "http://en.wikipedia.org/wiki/JavaScript" },
 				{ "key": "xml", "name": "XML" },
 				{ "key": "xaml", "name": "XAML" },
 				{ "key": "xslt", "name": "XSLT" },
 				{ "key": "xpath", "name": "XPath" },
-				{ "key": "xquery", "name": "XQuery" }
+				{ "key": "xquery", "name": "XQuery" },
+        { "key": "vbnet", "name": "VB.NET" }
 			]
 		},
 		{
@@ -63,15 +64,20 @@
 		{
 			"name": "APIs",
 			"skills": [
+        { "key": "authorizenet", "name": "Authorize.Net", "href": "http://www.authorize.net" },
+        { "key": "braintree", "name": "Braintree", "href": "http://www.braintreepaymentsolutionscom" },
+        { "key": "cybersource", "name": "Cybersource", "href": "http://www.cybersource.com" },
+				{ "key": "exchangewebdav", "name": "Exchange 2003 Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
 				{ "key": "facebook", "name": "Facebook", "href": "http://developers.facebook.com/" },
+				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" },
 				{ "key": "gcontacts", "name": "Google Contacts", "href": "http://code.google.com/apis/contacts/" },
 				{ "key": "gtalk", "name": "Google Talk", "href": "http://code.google.com/apis/talk/" },
 				{ "key": "gmaps", "name": "Google Maps", "href": "http://code.google.com/apis/maps/" },
 				{ "key": "mdx", "name": "Managed DirectX", "href": "http://mdxinfo.com/" },
 				{ "key": "opengl", "name": "OpenGL", "href": "http://www.opengl.org/" },
+        { "key": "paypalwpp", "name": "PayPal Website Payments Pro", "href": "https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content&content_ID=merchant/wp_pro" },
 				{ "key": "xna", "name": "XNA", "href": "http://msdn.microsoft.com/en-us/aa937791" },
-				{ "key": "exchangewebdav", "name": "Exchange 2003 Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
-				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" }
+        { "key": "payflowpro", "name": "PayPal Payflow Pro", "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside" }
 			]
 		},
 		{
@@ -90,8 +96,7 @@
 	],
 	"experiences": [
 		{
-			"type": "personal",
-			"start": 2010,
+			"type": "Personal",
 			"title": "Social event site",
 			"description": "Designed to connect people with events they would be interested in",
 			"skillKeys": [
@@ -113,9 +118,7 @@
 			]
 		},
 		{
-			"type": "personal",
-			"start": 2009,
-			"end": 2009,
+			"type": "Personal",
 			"title": "XmppSharp",
 			"description": "Native .NET library for connecting and communicating with jabber/xmpp servers",
 			"accomplishments": [
@@ -134,9 +137,7 @@
 			]
 		},
 		{
-			"type": "personal",
-			"start": 2009,
-			"end": 2009,
+			"type": "Personal",
 			"title": "RoadUI",
 			"description": "Touchscreen interface for a car computer",
 			"accomplishments": [
@@ -161,20 +162,18 @@
 			]
 		},
 		{
-			"type": "professional",
-			"start": 2007,
-			"company": "Orchid Event Solutions",
-			"title": "Lead Architect / Project Manager",
-			"description": "Led a team that created registration websites for corporate events",
+			"type": "Professional",
+			"start": 2009,
+			"company": "The Housing Connection",
+			"title": "Project Manager",
+			"description": "Led a team of 7 that created registration websites for corporate events",
 			"accomplishments": [
-				"Used automagic fairy dust to speed up development time of registration sites from a week to around 3 hours",
-				"Created applications to assist clients in managing their own events, creating a new revenue stream",
-				"Implemented standards to make the company PCI compliant"
+				"Created applications to allow clients to manage their own events, creating a new revenue stream",
+				"Implemented PCI standards to secure sensitive client data including credit cards and social security numbers"
 			],
 			"skillKeys": [
 				{ "key": "ccnet" },
 				{ "key": "csharp" },
-				{ "key": "dotnet11" },
 				{ "key": "dotnet20" },
 				{ "key": "dotnet35" },
 				{ "key": "dotnet40" },
@@ -185,7 +184,6 @@
 				{ "key": "javascript" },
 				{ "key": "jquery" },
 				{ "key": "msajax" },
-				{ "key": "sql2000" },
 				{ "key": "sql2008" },
 				{ "key": "sqlce4" },
 				{ "key": "vs2005" },
@@ -196,14 +194,52 @@
 				{ "key": "xaml" },
 				{ "key": "xml" },
 				{ "key": "xpath" },
-				{ "key": "xquery" },
-				{ "key": "xslt" }
+				{ "key": "xslt" },
+        { "key": "paypalwpp" },
+        { "key": "braintree" }
 			]
 		},
 		{
-			"type": "personal",
+			"type": "Professional",
 			"start": 2007,
-			"end": 2007,
+			"end": 2009,
+			"company": "Orchid Event Solutions",
+			"title": "Lead Architect",
+			"description": "Led a team of 7 that created registration websites for corporate events",
+			"accomplishments": [
+				"Refactored a series of copy-and-pasted registration sites to a common framework to reduce development time of registration sites from a week to around 3 hours and eliminate common sources of problems",
+				"Created applications to assist account managers in assisting clients"
+			],
+			"skillKeys": [
+				{ "key": "ccnet" },
+				{ "key": "csharp" },
+        { "key": "vbnet" },
+				{ "key": "dotnet11" },
+				{ "key": "dotnet20" },
+				{ "key": "dotnet35" },
+				{ "key": "dotnet40" },
+				{ "key": "aspnet" },
+				{ "key": "ef" },
+				{ "key": "javascript" },
+				{ "key": "jquery" },
+				{ "key": "msajax" },
+				{ "key": "sql2000" },
+				{ "key": "sqlce4" },
+				{ "key": "vs2005" },
+				{ "key": "vs2008" },
+				{ "key": "wpf" },
+				{ "key": "wcf" },
+				{ "key": "xaml" },
+				{ "key": "xml" },
+				{ "key": "xpath" },
+				{ "key": "xquery" },
+				{ "key": "xslt" },
+        { "key": "authorizenet" },
+        { "key": "payflowpro" }
+			]
+		},
+		{
+			"type": "Personal",
 			"title": "ContactSync",
 			"description": "Created a library for synchronizing contact information between various sources.",
 			"skillKeys": [
@@ -221,7 +257,7 @@
 			]
 		},
 		{
-			"type": "professional",
+			"type": "Professional",
 			"start": 2006,
 			"end": 2007,
 			"company": "Universal Metals",
@@ -244,11 +280,11 @@
 			]
 		},
 		{
-			"type": "professional",
+			"type": "Professional",
 			"start": 2005,
 			"end": 2006,
 			"company": "MyHorseplayer.com",
-			"title": "Lead Developer",
+			"title": "Architect",
 			"description": "Came up with an idea for a business, started a company, and built a self-sustaining application that managed and simplified data for horse racing.",
 			"skillKeys": [
 				{ "key": "aspnet" },
@@ -267,11 +303,11 @@
 			]
 		},
 		{
-			"type": "professional",
+			"type": "Professional",
 			"start": 2004,
 			"end": 2004,
 			"company": "Universal Metals",
-			"title": "Lead Developer",
+			"title": "Developer",
 			"description": "Hired in to a company that hadn't received any tech upgrades since 1997, I set about upgrading first their hardware and later digitized their database.",
 			"skillKeys": [ 
 				{ "key": "cpp" },

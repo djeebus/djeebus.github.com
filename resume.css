@@ -4,6 +4,31 @@
 }
 html, body {
 	height: 100%;
+	font-family: Verdana, Verdana, Geneva, sans-serif;
+	font-size: 14px;
+}
+body { 
+	margin: 0 1em;
+}
+h1 {
+	text-align: center;
+	margin-bottom: .5em;
+}
+p {
+	margin: 1em 0;
+}
+pre .wrap {
+	white-space: pre-wrap;
+}
+ul {
+	list-style-type: none;
+}
+
+#header {
+	padding-bottom: 1em;
+}
+#header ul, #header ul li {
+	display: inline;
 }
 #wrapper {
 	min-height: 100%;
@@ -17,17 +42,6 @@ html, body {
 #footer {
 	clear: both;
 }
-ul {
-	list-style-type: none;
-}
-h1 {
-	text-align: center;
-	padding-bottom: .5em;
-}
-body { 
-	margin: 0 1em;
-}
-
 #status {
 	float: right;
 	padding: .5em;
@@ -49,6 +63,21 @@ body {
 }
 .contact-info {
 	float: right;
+	width: 20em;
+}
+.contact-info .method {
+	clear: left;
+	display: block;
+	float: left;
+	padding-right: .5em;
+	text-align: right;
+	width: 5em;
+}
+.contact-info .value {
+	clear: right;
+	display: block;
+	float: left;
+	text-align: left;
 }
 .preamble {
 	margin-bottom: 1em;
@@ -79,24 +108,14 @@ body {
 	padding: 1em;
 	width: 40em;
 }
+.experiences h2 {
+	text-align: center;
+}
 .experiences .experience {
 	margin-bottom: 2em;
-	border: solid black thin;
-	padding: .5em;
-}
-.experiences .professional.experience {
-	background-color: #B3BEF4;
-}
-.experiences .personal.experience {
-	background-color: #B8F1C5;
 }
 .experiences .experience:last-child {
 	margin-bottom: 0;
-}
-.experiences .experience .type {
-	font-weight: normal;
-	font-size: .6em;
-	float: right;
 }
 .experiences .experience .title {
 	font-weight: bold;
@@ -106,6 +125,8 @@ body {
 	font-style: italic;
 }
 .experiences .experience .toggle-skills {
+	font-size: .6em;
+	float: right;
 }
 .experiences .accomplishments li {
 	list-style-type: disc;
@@ -137,4 +158,25 @@ body {
 }
 .experiences .experience.show-skills .skills-used-container {
 	display: block;
+}
+
+@media print {
+	#footer, #header, .toggle-skills, .skype-commands {
+		display: none;
+	}
+	a {
+		text-decoration: none;
+		color: Black;
+	}
+	.skills-container {
+		float: none;
+		width: 100%;
+	}
+	.experiences {
+		float: none;
+		width: 100%;
+	}
+	.curved {
+		border: 0;
+	}
 }

@@ -3,12 +3,32 @@
 		<title>Joseph Lombrozo's Resume</title>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.js"></script>
-		<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+		<!--<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>-->
+		<script type="text/javascript" src="jquery.tmpl.js"></script>
 		<script type="text/javascript" src="resume.js"></script>
 		<link type="text/css" rel="Stylesheet" href="resume.css" />
 	</head>
 	<body>
-		<div id="resume-template" style="display: none">
+		<div id="text-template" style="display: none">
+			<pre>
+${developer.name}
+${developer.city}, ${developer.state}
+{{each contact}}
+${method}: ${value}{{/each}}
+
+-=] ${preamble.title} [=-
+<div class="wrap">${preamble.content}</div>
+
+{{each experiences.sorted}}
+-=] ${name} Experience [=- 
+{{each experiences}}
+${title} {{if company}}@ ${company}{{/if}} {{if timespan}}(${timespan}){{/if}}
+${description}
+{{each accomplishments}} - ${this}
+{{/each}}{{/each}}{{/each}}
+			</pre>
+		</div>
+		<div id="html-template" style="display: none">
 			<div class="section">
 				<ul class="basic-info">
 					<li>${developer.name}</li>
@@ -18,18 +38,21 @@
 				<ul class="contact-info">
 				{{each contact}}
 					<li>
-						${method}: 
-					{{if method == "email"}}
-						<a href="mailto:${value}">${value}</a>
-					{{else method == "gtalk"}}
-						<a href="gtalk:chat?jid=${value}">${value}</a>
-					{{else method == "skype"}}
-						${value} (<a href="skype:${value}?call">call</a> or <a href="skype:${value}?chat">chat</a>)
-					{{else method == "linkedin"}}
-						<a href="http://linkedin.com/in/${value}" target="_blank">${value}</a>
-					{{else}}
-						${value}
-					{{/if}}
+						<span class="method">${method}</span>
+
+						<span class="value">
+						{{if method == "email"}}
+							<a href="mailto:${value}">${value}</a>
+						{{else method == "gtalk"}}
+							<a href="gtalk:chat?jid=${value}">${value}</a>
+						{{else method == "skype"}}
+							${value} <span class="skype-commands">(<a href="skype:${value}?call">call</a> or <a href="skype:${value}?chat">chat</a>)</span>
+						{{else method == "linkedin"}}
+							<a href="http://linkedin.com/in/${value}" target="_blank">${value}</a>
+						{{else}}
+							${value}
+						{{/if}}
+						</span>
 					</li>
 				{{/each}}
 				</ul>
@@ -37,14 +60,14 @@
 
 			<div class="preamble section">
 				<h1>${preamble.title}</h1>
-				<p>${preamble.content}</p>
+				<p>{{html preamble.content}}</p>
 			</div>
 
 			<div class="skills-container curved">
 				<h1>My Skills</h1>
 				{{each catalog}}
 					<div class="skills-category">
-						<h2>${name}</h2>
+						<h2>${name} (${skills.length})</h2>
 						<ul>
 						{{each skills}}
 							<li class="skill-define ${key}" skill-key="${key}">
@@ -63,39 +86,47 @@
 
 			<div class="experiences section curved">
 			<h1>Experiences</h1>
-			{{each experiences}}
-				<div class="${type} experience curved">
-					<div class="title">${title}<span class="type">${type}</span></div>
-					<div class="position-info">
-						<span class="timespan">${timespan}</span>
-						<span class="company">${company}</span>
-						<span class="toggle-skills">
-							<a href="javascript:void(0)">skills used</a>
-							<div class="skills-used-container">
-								{{each categories}}
-									<div class="skills-category">
-										<h2>${name}</h2>
-										<ul class="skills-used">
-											{{each skills}}
-											<li class="skill-use ${key}" skill-key="${key}">${name}</li>
-											{{/each}}
-										</ul>
-									</div>
-								{{/each}}
-							</div>
-						</span>
+			{{each experiences.sorted}}
+				<h2>${name}</h2>
+				{{each experiences}}
+					<div class="${type} experience">
+						<div class="title">${title} <a class="toggle-skills" href="javascript:void(0)">skills used</a></div>
+						<div class="skills-used-container">
+							{{each categories}}
+								<div class="skills-category">
+									<h2>${name}</h2>
+									<ul class="skills-used">
+										{{each skills}}
+										<li class="skill-use ${key}" skill-key="${key}">${name}</li>
+										{{/each}}
+									</ul>
+								</div>
+							{{/each}}
+						</div>
+						<div class="position-info">
+							<span class="timespan">${timespan}</span>
+							<span class="company">${company}</span>
+						</div>
+						<div class="description">${description}</div>
+						<ul class="accomplishments">
+						{{each accomplishments}}
+							<li>${this}</li>
+						{{/each}}
+						</ul>
 					</div>
-					<div class="description">${description}</div>
-					<ul class="accomplishments">
-					{{each accomplishments}}
-						<li>${this}</li>
-					{{/each}}
-					</ul>
-				</div>
+				{{/each}}
 			{{/each}}
 			</div>
 		</div>
 		<span id="status">Loading ... </span>
+		<div id="header">
+			Alternate formats: 
+			<ul>
+				<li><a href="resume.json">json</a></li>
+				<li><a class="change-template" template-name="text" href="javascript:void(0)">txt</a></li>
+				<li><a class="change-template" template-name="html" href="javascript:void(0)">html</a></li>
+			</ul>
+		</div>
 		<div id="wrapper">
 			<div id="content"></div>
 			<div id="push"></div>

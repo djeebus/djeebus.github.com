@@ -5,7 +5,15 @@
 		// initialize the status bar
 		var status = $('#status');
 
-		status.html('Please wait while loading ... ');
+		reportMessage('Precompiling templates ... ');
+		$('#html-template').template("html");
+		$('#text-template').template("text");
+
+		reportMessage('Binding commands ... ');
+		$('.change-template').click(function () {
+			buildResumeUi($(this).attr('template-name'));
+		});
+		status.html('Fetching resume ... ');
 
 		$.ajax({
 			type: "GET",
@@ -14,22 +22,44 @@
 			success: function (data) {
 				try {
 					myResume = data;
-					buildResumeUi();
+					buildViewModel(myResume);
+					buildResumeUi('html');
 
 					$('#status').hide();
 				}
 				catch (e) {
-					reportError(e);
+					reportMessage(e.toString());
 				}
 			},
 			error: function (a, msg, c) {
-				reportError(msg + ': ' + c);
+				reportMessage(msg + ': ' + c);
 			}
 		});
 	});
 
-	function reportError(msg) {
+	function reportMessage(msg) {
 		$('#status').html(msg);
+	}
+
+	function buildResumeUi(template) {
+		$('#content').empty();
+
+		$.tmpl(template, myResume).appendTo("#content");
+
+		if (template == 'html') {
+			$('#content').delegate('.skill-define,.skill-use', 'hover', function () {
+				var key = $(this).attr('skill-key');
+				var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
+				skills.toggleClass('skill-highlight');
+			})
+			.delegate('.toggle-skills', 'click', function () {
+				var parents = $(this).parents('.experience')
+				parents.toggleClass('show-skills');
+			})
+			.delegate('.toggle-skills-catalog', 'click', function () {
+				$('.skills-category').toggle();
+			});
+		}
 	}
 
 	function sortByName(a, b) {
@@ -76,15 +106,21 @@
 			return { key: key, name: key, category: "Skills" };
 		};
 
+		experiences.sorted = [];
+
 		for (var eIndex = 0; eIndex < experiences.length; eIndex++) {
 			var experience = experiences[eIndex];
 
-			if (experience.start == experience.end) {
-				experience.timespan = '' + experience.start;
-			} else if (experience.end) {
-				experience.timespan = '' + experience.start + ' - ' + experience.end;
+			if (experience.start || experience.end) {
+				if (experience.start == experience.end) {
+					experience.timespan = '' + experience.start;
+				} else if (experience.end) {
+					experience.timespan = '' + experience.start + ' - ' + experience.end;
+				} else {
+					experience.timespan = '' + experience.start + ' - current';
+				}
 			} else {
-				experience.timespan = '' + experience.start + ' - current';
+				experience.timespan = '';
 			}
 
 			var skillKeys = experience.skillKeys;
@@ -114,28 +150,44 @@
 			for (var c = 0; c < experience.categories.length; c++) {
 				experience.categories[c].skills.sort(sortByName);
 			}
+
+			var type = experience.type;
+
+			var category = null;
+			for (var cIndex = 0; cIndex < experiences.sorted.length; cIndex++) {
+				if (experiences.sorted[cIndex].name == type) {
+					category = experiences.sorted[cIndex];
+					break;
+				}
+			}
+
+			if (category == null) {
+				var category = { name: type, experiences: [] };
+
+				// ordering hack!!
+				if (type == 'Professional') {
+					category.index = 0;
+				} else {
+					category.index = 1;
+				}
+
+				experiences.sorted[experiences.sorted.length] = category;
+			}
+
+			var sorted = category.experiences;
+			sorted[sorted.length] = experience;
 		}
 
-		return resume;
-	}
-
-	var resumeTemplateName = "resumeTemplate";
-	function buildResumeUi() {
-		var viewModel = buildViewModel(myResume);
-
-		$('#resume-template').tmpl(viewModel).appendTo("#content");
-
-		$('#content').delegate('.skill-define,.skill-use', 'hover', function () {
-			var key = $(this).attr('skill-key');
-			var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
-			skills.toggleClass('skill-highlight');
-		})
-		.delegate('.toggle-skills', 'click', function () {
-			var parents = $(this).parents('.experience')
-			parents.toggleClass('show-skills');
-		})
-		.delegate('.toggle-skills-catalog', 'click', function () {
-			$('.skills-category').toggle();
+		experiences.sorted.sort(function (a, b) {
+			if (a.index == b.index) {
+				return 0;
+			} else if (a.index < b.index) {
+				return -1;
+			} else {
+				return 1;
+			}
 		});
+
+		return resume;
 	}
 })(jQuery);
