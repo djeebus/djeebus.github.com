@@ -17,14 +17,14 @@ ${developer.city}, ${developer.state}
 ${method}: ${value}{{/each}}
 
 -=] ${preamble.title} [=-
-<div class="wrap">${preamble.content}</div>
+${preamble.content}
 
 {{each experiences.sorted}}
 -=] ${name} Experience [=- 
 {{each experiences}}
 ${title} {{if company}}@ ${company}{{/if}} {{if timespan}}(${timespan}){{/if}}
 ${description}
-{{each accomplishments}} - ${this}
+{{each accomplishments}} * ${this}
 {{/each}}{{/each}}{{/each}}
 			</pre>
 		</div>
