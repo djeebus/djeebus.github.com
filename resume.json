@@ -1,4 +1,4 @@
-{
+var a = {
 	"developer": {
 		"name": "Joseph Lombrozo",
 		"city": "Albuquerque",
@@ -168,7 +168,7 @@
 								{ "key": "braintree" }
 							]
 						}
-					],
+					]
 				},
 				{
 					"start": 2005,
