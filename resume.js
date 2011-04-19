@@ -53,7 +53,7 @@
 				skills.toggleClass('skill-highlight');
 			})
 			.delegate('.toggle-skills', 'click', function () {
-				var parents = $(this).parents('.experience')
+				var parents = $(this).parents('.position-info')
 				parents.toggleClass('show-skills');
 			})
 			.delegate('.toggle-skills-catalog', 'click', function () {
@@ -75,8 +75,6 @@
 	}
 
 	function buildViewModel(resume) {
-		var experiences = resume.experiences;
-
 		var skillsCatalog = resume.catalog;
 
 		skillsCatalog.sort(sortByName);
@@ -106,87 +104,79 @@
 			return { key: key, name: key, category: "Skills" };
 		};
 
-		experiences.sorted = [];
+		resume.importantSkills = [];
 
-		for (var eIndex = 0; eIndex < experiences.length; eIndex++) {
-			var experience = experiences[eIndex];
-
-			if (experience.start || experience.end) {
-				if (experience.start == experience.end) {
-					experience.timespan = '' + experience.start;
-				} else if (experience.end) {
-					experience.timespan = '' + experience.start + ' - ' + experience.end;
-				} else {
-					experience.timespan = '' + experience.start + ' - current';
-				}
-			} else {
-				experience.timespan = '';
-			}
-
-			var skillKeys = experience.skillKeys;
-			experience.categories = new Array();
-
-			for (var sIndex = 0; sIndex < skillKeys.length; sIndex++) {
-				var key = skillKeys[sIndex].key;
-				var skill = skillsCatalog.findSkill(key);
-
-				var category = null;
-				for (var categoryIndex = 0; categoryIndex < experience.categories.length; categoryIndex++) {
-					if (experience.categories[categoryIndex].name == skill.category) {
-						category = experience.categories[categoryIndex];
-						break;
-					}
-				}
-
-				if (category == null) {
-					var category = { skills: new Array(), name: skill.category };
-					experience.categories[experience.categories.length] = category;
-				}
-
-				category.skills[category.skills.length] = skill;
-			}
-
-			experience.categories.sort(sortByName);
-			for (var c = 0; c < experience.categories.length; c++) {
-				experience.categories[c].skills.sort(sortByName);
-			}
-
-			var type = experience.type;
-
-			var category = null;
-			for (var cIndex = 0; cIndex < experiences.sorted.length; cIndex++) {
-				if (experiences.sorted[cIndex].name == type) {
-					category = experiences.sorted[cIndex];
-					break;
+		for (var cIndex = 0; cIndex < resume.catalog.length; cIndex++) {
+			var c = resume.catalog[cIndex];
+			for (var sIndex = 0; sIndex < c.skills.length; sIndex++) {
+				var s = c.skills[sIndex];
+				if (s.important) {
+					resume.importantSkills[resume.importantSkills.length++] = s;
 				}
 			}
-
-			if (category == null) {
-				var category = { name: type, experiences: [] };
-
-				// ordering hack!!
-				if (type == 'Professional') {
-					category.index = 0;
-				} else {
-					category.index = 1;
-				}
-
-				experiences.sorted[experiences.sorted.length] = category;
-			}
-
-			var sorted = category.experiences;
-			sorted[sorted.length] = experience;
 		}
 
-		experiences.sorted.sort(function (a, b) {
-			if (a.index == b.index) {
-				return 0;
-			} else if (a.index < b.index) {
-				return -1;
-			} else {
-				return 1;
+		var types = resume.experienceTypes;
+		for (var tIndex = 0; tIndex < types.length; tIndex++) {
+			var experiences = types[tIndex].experiences;
+			for (var eIndex = 0; eIndex < experiences.length; eIndex++) {
+				var experience = experiences[eIndex];
+
+				if (experience.start || experience.end) {
+					if (experience.start == experience.end) {
+						experience.timespan = '' + experience.start;
+					} else if (experience.end) {
+						experience.timespan = '' + experience.start + ' - ' + experience.end;
+					} else {
+						experience.timespan = '' + experience.start + ' - current';
+					}
+				} else {
+					experience.timespan = '';
+				}
+
+				if (typeof experience.positions != 'undefined') {
+					for (var pIndex = 0; pIndex < experience.positions.length; pIndex++) {
+						var position = experience.positions[pIndex];
+
+						if (typeof position.skillKeys == 'undefined') {
+							continue;
+						}
+						var skillKeys = position.skillKeys;
+						position.categories = new Array();
+
+						for (var sIndex = 0; sIndex < skillKeys.length; sIndex++) {
+							var key = skillKeys[sIndex].key;
+							var skill = skillsCatalog.findSkill(key);
+
+							var category = null;
+							for (var categoryIndex = 0; categoryIndex < position.categories.length; categoryIndex++) {
+								if (position.categories[categoryIndex].name == skill.category) {
+									category = position.categories[categoryIndex];
+									break;
+								}
+							}
+
+							if (category == null) {
+								var category = { skills: new Array(), name: skill.category };
+								position.categories[position.categories.length] = category;
+							}
+
+							category.skills[category.skills.length] = skill;
+
+							category.skills.sort(function (a, b) {
+								if (a.name < b.name) {
+									return -1;
+								} else if (a.name == b.name) {
+									return 0;
+								} else {
+									return 1;
+								}
+							});
+						}
+					}
+				}
 			}
-		});
+		}
 
 		return resume;
 	}

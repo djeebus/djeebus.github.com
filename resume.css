@@ -9,10 +9,15 @@ html, body {
 }
 body { 
 	margin: 0 1em;
+	color: White;
+	background-color: Black;
 }
 h1 {
 	text-align: center;
 	margin-bottom: .5em;
+}
+h2 {
+	text-align: center;
 }
 p {
 	margin: 1em 0;
@@ -30,14 +35,16 @@ ul {
 #header ul, #header ul li {
 	display: inline;
 }
-#wrapper {
+#content {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -20px;
-}
-#footer, #push {
-	height: 20px;
+
+	background-color: White;
+	color: Black;
+
+	margin: 0 auto;
+	padding: 1em;
 }
 #footer {
 	clear: both;
@@ -53,9 +60,13 @@ ul {
 	clear: both;
 }
 .curved {
+	border: solid thin black;
 	border-radius: 1em;
 	-moz-border-radius: 1em;
 	-webkit-border-radius: 1em;
+}
+p.description {
+	margin-left: 2em;
 }
 
 .basic-info {
@@ -82,47 +93,68 @@ ul {
 .preamble {
 	margin-bottom: 1em;
 }
+.preamble h2 {
+	clear: both;
+}
+.preamble ul {
+	list-style-type: circle;
+	height: 6em;
+	padding-bottom: 1em;
+}
+.preamble ul li {
+	width: 26em;
+	margin-left: 2em;
+	float: left;
+}
 .skills-container {
-	border: solid thin black;
 	padding: 1em;
-	
+	margin-top: 1em;
 	display: block;
 	width: 15em;
 	float: right;
+	
+	/* hack: off by 1em due to floats */
+	position: relative;
+	top: -1em;
 }
 .skills-container .toggle-skills-catalog {
 	float: right;
 }
 .skills-container .skills-category {
-	float: left;
 	padding-right: 1em;
 }
-
+.skills-container .skills-category .skill-define.important {
+	background-image: url(smooth-star.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
 .skill-highlight {
 	background-color: #EFEB4B !important;
 }
 .experiences {
-	border: solid thin black;
 	clear: left;
-	float: left;
 	padding: 1em;
 	width: 40em;
-}
-.experiences h2 {
-	text-align: center;
+	margin-top: 1em;
 }
 .experiences .experience {
-	margin-bottom: 2em;
+	padding-bottom: 2em;
 }
 .experiences .experience:last-child {
 	margin-bottom: 0;
 }
-.experiences .experience .title {
-	font-weight: bold;
-	font-size: 1.5em;
+.experiences .experience h3 {
+	line-height: 1.5em;
 }
 .experiences .experience .company {
-	font-style: italic;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.experiences .experience .locale {
+	font-weight: normal;
+}
+.experiences .experience .position-info {
+	padding-bottom: 1em;
 }
 .experiences .experience .toggle-skills {
 	font-size: .6em;
@@ -132,31 +164,28 @@ ul {
 	list-style-type: disc;
 	margin-left: 2em;
 }
-.experiences .experience .skills-used-container {
+.skills-used-container {
 	position: absolute;
 	display: none;
 	background-color: #EFE4B0;
-	border: thin black solid;
-	border-radius: 1em;
-	-moz-border-radius: 1em;
 	padding: 0.5em;
 	z-index: 100;
 }
-.experiences .experience .skills-used-container h2 {
+.skills-used-container h2 {
 	display: inline;
 }
-.experiences .experience .skills-used-container ul {
+.skills-used-container ul {
 	display: inline;
 }
-.experiences .experience .skills-used-container ul li {
+.skills-used-container ul li {
 	border-left: 3px solid black;
 	padding: 0 .5em;
 	display: inline;
 }
-.experiences .experience .skills-used-container ul li:first-child {
+.skills-used-container ul li:first-child {
 	border-left: 0;
 }
-.experiences .experience.show-skills .skills-used-container {
+.show-skills .skills-used-container {
 	display: block;
 }
 
@@ -171,6 +200,11 @@ ul {
 	.skills-container {
 		float: none;
 		width: 100%;
+		page-break-after: always;
+	}
+	.skills-container .skills-category {
+		float: left;
+		height: 20em;
 	}
 	.experiences {
 		float: none;

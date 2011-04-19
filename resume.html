@@ -9,7 +9,7 @@
 		<link type="text/css" rel="Stylesheet" href="resume.css" />
 	</head>
 	<body>
-		<div id="text-template" style="display: none">
+		<script id="text-template" type="text/x-jquery-tmpl">
 			<pre>
 ${developer.name}
 ${developer.city}, ${developer.state}
@@ -19,16 +19,18 @@ ${method}: ${value}{{/each}}
 -=] ${preamble.title} [=-
 ${preamble.content}
 
-{{each experiences.sorted}}
--=] ${name} Experience [=- 
-{{each experiences}}
+-=] Expertise [=-{{each accomplishments}}
+ * ${$value}{{/each}}
+
+{{each experiences.sorted}}-=] ${name} Experience [=- {{each experiences}}
 ${title} {{if company}}@ ${company}{{/if}} {{if timespan}}(${timespan}){{/if}}
 ${description}
 {{each accomplishments}} * ${this}
-{{/each}}{{/each}}{{/each}}
+{{/each}}{{/each}}
+{{/each}}
 			</pre>
-		</div>
-		<div id="html-template" style="display: none">
+		</script>
+		<script id="html-template" type="text/x-jquery-tmpl">
 			<div class="section">
 				<ul class="basic-info">
 					<li>${developer.name}</li>
@@ -61,6 +63,20 @@ ${description}
 			<div class="preamble section">
 				<h1>${preamble.title}</h1>
 				<p>{{html preamble.content}}</p>
+
+				<h2>Accomplishments</h2>
+				<ul id="important-accomplishments">
+				{{each accomplishments}}
+					<li>${$value}</li>
+				{{/each}}
+				</ul>
+
+				<h2>Skill Highlights</h2>
+				<ul id="important-skills">
+				{{each importantSkills}}
+					<li>${name}</li>
+				{{/each}}
+				</ul>
 			</div>
 
 			<div class="skills-container curved">
@@ -70,7 +86,7 @@ ${description}
 						<h2>${name} (${skills.length})</h2>
 						<ul>
 						{{each skills}}
-							<li class="skill-define ${key}" skill-key="${key}">
+							<li class="skill-define ${key} ${$value.important ? 'important' : ''}" skill-key="${key}">
 							{{if href}}
 								<a href="${href}" target="_blank">${name}</a>
 							{{else}}
@@ -84,40 +100,47 @@ ${description}
 				<br style="float: none; clear: both;" />
 			</div>
 
-			<div class="experiences section curved">
+			<div class="experiences section">
 			<h1>Experiences</h1>
-			{{each experiences.sorted}}
+			{{each experienceTypes}}
 				<h2>${name}</h2>
 				{{each experiences}}
 					<div class="${type} experience">
-						<div class="title">${title} <a class="toggle-skills" href="javascript:void(0)">skills used</a></div>
-						<div class="skills-used-container">
-							{{each categories}}
-								<div class="skills-category">
-									<h2>${name}</h2>
-									<ul class="skills-used">
-										{{each skills}}
-										<li class="skill-use ${key}" skill-key="${key}">${name}</li>
-										{{/each}}
-									</ul>
-								</div>
-							{{/each}}
+						<h3><span class="company">${company}</span></h3>
+						<div class="company-details">
+							{{if timespan}}<span class="timespan">${timespan}</span>{{/if}}
+							{{if locale}}<span class="locale">${locale}</span>{{/if}}
 						</div>
+						<p class="description">${description}</p>
+
+						{{each positions}}
 						<div class="position-info">
-							<span class="timespan">${timespan}</span>
-							<span class="company">${company}</span>
+							<span class="title">${title} {{if categories}}<a class="toggle-skills" href="javascript:void(0)">skills used</a>{{/if}}</span>
+							<div class="skills-used-container curved">
+								{{each categories}}
+									<div class="skills-category">
+										<h2>${name}</h2>
+										<ul class="skills-used">
+											{{each skills}}
+											<li class="skill-use ${key}" skill-key="${key}">${name}</li>
+											{{/each}}
+										</ul>
+									</div>
+								{{/each}}
+							</div>
+							<p class="description">${details}</p>
+							<ul class="accomplishments">
+							{{each accomplishments}}
+								<li>${this}</li>
+							{{/each}}
+							</ul>
 						</div>
-						<div class="description">${description}</div>
-						<ul class="accomplishments">
-						{{each accomplishments}}
-							<li>${this}</li>
 						{{/each}}
-						</ul>
 					</div>
 				{{/each}}
 			{{/each}}
 			</div>
-		</div>
+		</script>
 		<span id="status">Loading ... </span>
 		<div id="header">
 			Alternate formats: 
@@ -127,10 +150,7 @@ ${description}
 				<li><a class="change-template" template-name="html" href="javascript:void(0)">html</a></li>
 			</ul>
 		</div>
-		<div id="wrapper">
-			<div id="content"></div>
-			<div id="push"></div>
-		</div>
+		<div id="content" class="curved"></div>
 		<div id="footer">
 			Designed and coded by Joseph Lombrozo, &copy; 2011
 		</div>
