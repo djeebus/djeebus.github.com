@@ -118,7 +118,7 @@
 	],
 	"experienceTypes": [
 		{
-			"name": "Professional history",
+			"name": "Professional History",
 			"experiences": [
 				{
 					"start": 2007,
@@ -144,7 +144,7 @@
 							"title": "Lead Architect",
 							"details": "Responsible for doing the initial planning and development for all new software and features",
 							"accomplishments": [
-								"Refactored a series of copy-and-pasted registration sites to a common framework to reduce development time of registration sites from a week to around 3 hours and eliminate common sources of problems",
+								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems",
 								"Created applications to assist account managers in assisting clients"
 							],
 							"skillKeys": [
@@ -179,37 +179,6 @@
 								{ "key": "vs2010" },
 								{ "key": "paypalwpp" },
 								{ "key": "braintree" }
-							]
-						}
-					]
-				},
-				{
-					"start": 2005,
-					"end": 2006,
-					"company": "MyHorseplayer.com",
-					"locale": "Orange, CA",
-					"description": "Hosted service that aided thoroughbred handicappers with calculating statistics.",
-					"positions": [
-						{
-							"title": "Chief Information Officer and Lead Architect",
-							"accomplishments": [
-								"Started a new company, gathered funding and generated community interest.",
-								"Optimized a sql database to generate complicated statistics that mined data from over 15 years of handicapping data and 2.5 million races."
-							],
-							"skillKeys": [
-								{ "key": "aspnet" },
-								{ "key": "cpp" },
-								{ "key": "csharp" },
-								{ "key": "dotnet11" },
-								{ "key": "dotnet20" },
-								{ "key": "javascript" },
-								{ "key": "msajax" },
-								{ "key": "mfc" },
-								{ "key": "sql2000" },
-								{ "key": "vs2005" },
-								{ "key": "xml" },
-								{ "key": "xslt" },
-								{ "key": "xpath" }
 							]
 						}
 					]
@@ -262,7 +231,7 @@
 				},
 				{
 					"start": 2002,
-					"end": 2003,
+					"end": 2004,
 					"company": "All Metals Engineering",
 					"locale": "Huntington Beach, CA",
 					"description": "Government broker",
@@ -284,8 +253,37 @@
 			]
 		},
 		{
-			"name": "Personal projects", 
+			"name": "Additional Experience", 
 			"experiences": [
+				{
+					"company": "MyHorseplayer.com",
+					"locale": "Orange, CA",
+					"description": "Hosted service that aided thoroughbred handicappers with calculating statistics.",
+					"positions": [
+						{
+							"title": "Chief Information Officer and Lead Architect",
+							"accomplishments": [
+								"Started a new company, gathered funding and generated community interest.",
+								"Optimized a sql database to generate complicated statistics that mined data from over 15 years of handicapping data and 2.5 million races."
+							],
+							"skillKeys": [
+								{ "key": "aspnet" },
+								{ "key": "cpp" },
+								{ "key": "csharp" },
+								{ "key": "dotnet11" },
+								{ "key": "dotnet20" },
+								{ "key": "javascript" },
+								{ "key": "msajax" },
+								{ "key": "mfc" },
+								{ "key": "sql2000" },
+								{ "key": "vs2005" },
+								{ "key": "xml" },
+								{ "key": "xslt" },
+								{ "key": "xpath" }
+							]
+						}
+					]
+				},
 				{
 					"company": "Social event site",
 					"description": "Designed to connect people with events they would be interested in",
@@ -366,7 +364,7 @@
 				},
 				{
 					"company": "ContactSync",
-					"description": "A library for synchronizing contact information between various sources.",
+					"description": "A library for synchronizing contact information between 3rd party APIs.",
 					"positions": [
 						{
 							"title": "Cowboy coder",

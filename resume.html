@@ -88,7 +88,7 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 				<h1>My Skills</h1>
 				{{each catalog}}
 					<div class="skills-category">
-						<h2>${name} (${skills.length})</h2>
+						<h2>${name}</h2>
 						<ul>
 						{{each skills}}
 							<li class="skill-define ${key} ${$value.important ? 'important' : ''}" skill-key="${key}">
@@ -106,7 +106,6 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 			</div>
 
 			<div class="experiences section">
-			<h1>Experiences</h1>
 			{{each experienceTypes}}
 				<h2>${name}</h2>
 				{{each experiences}}
@@ -150,9 +149,9 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 		<div id="header">
 			Alternate formats: 
 			<ul>
-				<li><a href="resume.json">json</a></li>
-				<li><a class="change-template" template-name="text" href="?template=text">txt</a></li>
 				<li><a class="change-template" template-name="html" href="?template=html">html</a></li>
+				<li><a class="change-template" template-name="text" href="?template=text">txt</a></li>
+				<li><a href="resume.json">json</a></li>
 			</ul>
 		</div>
 		<div id="content" class="curved"></div>
