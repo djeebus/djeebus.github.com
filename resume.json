@@ -7,6 +7,7 @@
 	"contact": [
 		{ "method": "email", "value": "joe@djeebus.net" },
 		{ "method": "cell", "value": "(714) 588-2788" },
+		{ "method": "aim", "value": "digitaljeebus" },
 		{ "method": "gtalk", "value": "digitaljeebus@gmail.com" },
 		{ "method": "skype", "value": "digitaljeebus" },
 		{ "method": "linkedin", "value": "djeebus" }
@@ -15,7 +16,7 @@
 		"title": "Software Architect",
 		"content": "Innovative and resourceful lead architect with 10 years of experience specializing in building easily maintainable and surprisingly functional applications. Recognized and took advantage of opportunities for new revenue streams for small businesses in various industries. Meets deadlines and exceeds expectations in adverse situations."
 	},
-	"accomplishments": [
+	"expertise": [
 		"Requirements gathering",
 		"Leading a team of developers",
 		"Architecting large-scale software projects",
@@ -56,6 +57,15 @@
 				{ "key": "msajax", "name": "Microsoft Ajax Library" },
 				{ "key": "jquery", "name": "jQuery", "href": "http://jquery.com", "important": true },
 				{ "key": "mfc", "name": "Microsoft Foundation Classes" }
+			]
+		},
+		{
+			"name": "Methodologies",
+			"skills": [
+				{ "key": "agile", "name": "Agile", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
+				{ "key": "waterfall", "name": "Waterfall", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
+				{ "key": "scrum", "name": "Scrum", "href": "http://en.wikipedia.org/wiki/Scrum_%28development%29" },
+				{ "key": "cowboy", "name": "Cowboy Coding", "href": "http://en.wikipedia.org/wiki/Cowboy_coding" }
 			]
 		},
 		{
@@ -101,7 +111,8 @@
 				{ "key": "sql2000", "name": "SQL Server 2000" },
 				{ "key": "sql2008", "name": "SQL Server 2008", "important": true },
 				{ "key": "sqlce4", "name": "SQL Server Compact 4.0" },
-				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" }
+				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" },
+				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" }
 			]
 		}
 	],
@@ -113,24 +124,26 @@
 					"start": 2007,
 					"company": "Orchid Event Solutions / The Housing Connection",
 					"locale": "Salt Lake City, UT",
-					"description": "Provides customized registration and housing solutions for international corporate events.",
+					"description": "Provides customized registration and housing solutions for international corporate events, including data integration, payments, lead retrieval, credentials, and onsite support.",
 					"positions": [ 
 						{
 							"title": "Director of Development",
+							"details": "Led a team of 7 to enhance our applications and meet customers needs and deadlines, maintain our datacenter, manage and track goals and deadlines.",
 							"accomplishments": [
-								"Created applications to allow clients to manage their own events, creating a new revenue stream",
+								"Created applications to allow low-budget clients to manage their own events, creating a new revenue stream",
 								"Implemented PCI standards to secure sensitive client data including credit cards and social security numbers"
 							],
 							"skillKeys": [
 								{ "key": "ccnet" },
 								{ "key": "agile" },
+								{ "key": "scrum" },
 								{ "key": "fogbugz" }
 							]
 						},
-												{
+						{
 							"title": "Lead Architect",
+							"details": "Responsible for doing the initial planning and development for all new software and features",
 							"accomplishments": [
-								"Led a team of 7 that created registration websites for corporate events",
 								"Refactored a series of copy-and-pasted registration sites to a common framework to reduce development time of registration sites from a week to around 3 hours and eliminate common sources of problems",
 								"Created applications to assist account managers in assisting clients"
 							],
@@ -180,7 +193,8 @@
 						{
 							"title": "Chief Information Officer and Lead Architect",
 							"accomplishments": [
-								"Came up with an idea for a business, started a company, and built a self-sustaining application that managed and simplified data for horse racing."
+								"Started a new company, gathered funding and generated community interest.",
+								"Optimized a sql database to generate complicated statistics that mined data from over 15 years of handicapping data and 2.5 million races."
 							],
 							"skillKeys": [
 								{ "key": "aspnet" },
@@ -204,7 +218,8 @@
 					"start": 2004,
 					"end": 2007,
 					"company": "Universal Metals",
-					"description": "Metals broker",
+					"locale": "Orange, CA",
+					"description": "Leading metal supplier for southern california industrial needs including aerospace, government, and engineering firms.",
 					"positions": [
 						{
 							"title": "Director of IT",
@@ -231,7 +246,7 @@
 						{
 							"title": "Cowboy coder",
 							"accomplishments": [
-								"Hired in to a company that hadn't received any tech upgrades since 1997, I set about upgrading first their hardware and later digitized their database."
+								"Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
 							],
 							"skillKeys": [
 								{ "key": "cpp" },
@@ -249,12 +264,14 @@
 					"start": 2002,
 					"end": 2003,
 					"company": "All Metals Engineering",
+					"locale": "Huntington Beach, CA",
 					"description": "Government broker",
 					"positions": [
 						{
 							"title": "Cowboy coder",
 							"accomplishments": [
-								"The employees were using type-writers and cardboard boxes for record tracking and data-warehousing, I built them a heavily customized access database and some automated services that reduced their work load from 10 hours a day to an hour of responding to automated emails and fax responses."
+								"Updated the employees from type-writers and cardboard boxes to the 21st century",
+								"Reduced employees' work load from 10 hours a day to an hour of responding to automated emails and fax responses."
 							],
 							"skillKeys": [
 								{ "key": "cpp" },

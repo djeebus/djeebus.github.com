@@ -20,7 +20,7 @@ h2 {
 	text-align: center;
 }
 p {
-	margin: 1em 0;
+	margin: .5em 0;
 }
 pre {
 	white-space: pre-wrap;
@@ -34,6 +34,11 @@ ul {
 }
 #header ul, #header ul li {
 	display: inline;
+}
+#header a,
+#header a:visited,
+#header a:link {
+	color: #2BF0EC;
 }
 #content {
 	min-height: 100%;
@@ -137,9 +142,6 @@ p.description {
 	width: 40em;
 	margin-top: 1em;
 }
-.experiences .experience {
-	padding-bottom: 2em;
-}
 .experiences .experience:last-child {
 	margin-bottom: 0;
 }
@@ -148,13 +150,19 @@ p.description {
 }
 .experiences .experience .company {
 	font-weight: bold;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
-.experiences .experience .locale {
-	font-weight: normal;
+.experiences .experience .company-details {
+	font-size: .7em;
+}
+.experiences .experience .timespan {
+	float: right;
 }
 .experiences .experience .position-info {
 	padding-bottom: 1em;
+}
+.experiences .experience .position-info .accomplishments {
+	margin-left: 2em;
 }
 .experiences .experience .toggle-skills {
 	font-size: .6em;

@@ -1,6 +1,18 @@
 (function ($) {
 	var myResume;
 
+	var urlParams = {};
+	(function () {
+		var e,
+			a = /\+/g,  // Regex for replacing addition symbol with a space
+			r = /([^&=]+)=?([^&]*)/g,
+			d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+			q = window.location.search.substring(1);
+
+		while (e = r.exec(q))
+			urlParams[d(e[1])] = d(e[2]);
+	})();
+
 	$(document).ready(function () {
 		// initialize the status bar
 		var status = $('#status');
@@ -10,9 +22,9 @@
 		$('#text-template').template("text");
 
 		reportMessage('Binding commands ... ');
-		$('.change-template').click(function () {
-			buildResumeUi($(this).attr('template-name'));
-		});
+		$('.change-template')
+			.click(function () { buildResumeUi($(this).attr('template-name')); return false; })
+			.each(function () { $(this).attr('href', '?template=' + $(this).attr('template-name')); });
 		status.html('Fetching resume ... ');
 
 		$.ajax({
@@ -23,7 +35,12 @@
 				try {
 					myResume = data;
 					buildViewModel(myResume);
-					buildResumeUi('html');
+
+					var t = urlParams.template;
+					if (typeof t == 'undefined') {
+						t = 'html';
+					}
+					buildResumeUi(t);
 
 					$('#status').hide();
 				}
@@ -37,16 +54,28 @@
 		});
 	});
 
+	function getParameterByName(name) {
+		name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		var regexS = "[\\?&]" + name + "=([^&#]*)";
+		var regex = new RegExp(regexS);
+		var results = regex.exec(window.location.href);
+		if (results == null)
+			return "";
+		else
+			return decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
 	function reportMessage(msg) {
 		$('#status').html(msg);
 	}
 
-	function buildResumeUi(template) {
+	function buildResumeUi(templateName) {
 		$('#content').empty();
 
-		$.tmpl(template, myResume).appendTo("#content");
+		var template = $.tmpl(templateName, myResume)
+		template.appendTo("#content");
 
-		if (template == 'html') {
+		if (templateName == 'html') {
 			$('#content').delegate('.skill-define,.skill-use', 'hover', function () {
 				var key = $(this).attr('skill-key');
 				var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
@@ -76,12 +105,6 @@
 
 	function buildViewModel(resume) {
 		var skillsCatalog = resume.catalog;
-
-		skillsCatalog.sort(sortByName);
-
-		for (var x = 0; x < skillsCatalog.length; x++) {
-			skillsCatalog[x].skills.sort(sortByName);
-		}
 
 		skillsCatalog.findSkill = function (key) {
 			for (var x = 0; x < this.length; x++) {

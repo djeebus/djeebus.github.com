@@ -14,19 +14,24 @@
 ${developer.name}
 ${developer.city}, ${developer.state}
 {{each contact}}
-${method}: ${value}{{/each}}
+${method}: {{if method == 'linkedin'}}linkedin.com/in/${value}{{else}}${value}{{/if}}{{/each}}
 
--=] ${preamble.title} [=-
+${preamble.title.toUpperCase()}
 ${preamble.content}
 
--=] Expertise [=-{{each accomplishments}}
- * ${$value}{{/each}}
+EXPERTISE{{each expertise}}
+  * ${this}{{/each}}
 
-{{each experiences.sorted}}-=] ${name} Experience [=- {{each experiences}}
-${title} {{if company}}@ ${company}{{/if}} {{if timespan}}(${timespan}){{/if}}
-${description}
-{{each accomplishments}} * ${this}
-{{/each}}{{/each}}
+SKILL HIGHLIGHTS{{each importantSkills}}
+  * ${name}{{/each}}
+
+{{each experienceTypes}}${name.toUpperCase()}{{each experiences}}
+  ${company.toUpperCase()} {{if timespan}}(${timespan}){{/if}}{{if locale}} ${locale}{{/if}}
+{{if description}}  ${description}{{/if}}
+{{each positions}}  - ${title}{{if details}}
+    ${details}{{/if}}
+{{each accomplishments}}    * ${this}
+{{/each}}{{/each}}{{/each}}
 {{/each}}
 			</pre>
 		</script>
@@ -66,7 +71,7 @@ ${description}
 
 				<h2>Accomplishments</h2>
 				<ul id="important-accomplishments">
-				{{each accomplishments}}
+				{{each expertise}}
 					<li>${$value}</li>
 				{{/each}}
 				</ul>
@@ -74,7 +79,7 @@ ${description}
 				<h2>Skill Highlights</h2>
 				<ul id="important-skills">
 				{{each importantSkills}}
-					<li>${name}</li>
+					<li class="skill-define" skill-key="${key}">${name}</li>
 				{{/each}}
 				</ul>
 			</div>
@@ -146,8 +151,8 @@ ${description}
 			Alternate formats: 
 			<ul>
 				<li><a href="resume.json">json</a></li>
-				<li><a class="change-template" template-name="text" href="javascript:void(0)">txt</a></li>
-				<li><a class="change-template" template-name="html" href="javascript:void(0)">html</a></li>
+				<li><a class="change-template" template-name="text" href="?template=text">txt</a></li>
+				<li><a class="change-template" template-name="html" href="?template=html">html</a></li>
 			</ul>
 		</div>
 		<div id="content" class="curved"></div>
