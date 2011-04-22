@@ -28,25 +28,22 @@
 		{
 			"name": "Languages",
 			"skills": [
-				{ "key": "cpp", "name": "C++", "href": "http://en.wikipedia.org/wiki/C++" },
 				{ "key": "csharp", "name": "C#", "href": "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)", "important": true },
 				{ "key": "javascript", "name": "JavaScript", "href": "http://en.wikipedia.org/wiki/JavaScript", "important": true },
-				{ "key": "xml", "name": "XML", "href": "http://en.wikipedia.org/wiki/XML" },
+				{ "key": "xml", "name": "XML", "href": "http://en.wikipedia.org/wiki/XML", "important": true },
 				{ "key": "xaml", "name": "XAML", "href": "http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" },
 				{ "key": "xslt", "name": "XSLT", "href": "http://en.wikipedia.org/wiki/XSLT" },
 				{ "key": "xpath", "name": "XPath", "href": "http://en.wikipedia.org/wiki/XPath" },
 				{ "key": "xquery", "name": "XQuery", "href": "http://www.w3schools.com/xquery/default.asp" },
-				{ "key": "vba", "name": "Visual Basic for Applications" },
-				{ "key": "vbnet", "name": "VB.NET", "href": "http://en.wikipedia.org/wiki/Visual_Basic_.NET" }
+				{ "key": "cpp", "name": "C++", "href": "http://en.wikipedia.org/wiki/C++", "hidden": true },
+				{ "key": "vba", "name": "VBA", "href": "http://en.wikipedia.org/wiki/Visual_Basic_for_Applications", "hidden": true },
+				{ "key": "vbnet", "name": "VB.NET", "href": "http://en.wikipedia.org/wiki/Visual_Basic_.NET", "hidden": true }
 			]
 		},
 		{
 			"name": "Frameworks",
 			"skills": [
-				{ "key": "dotnet11", "name": ".NET 1.1", "href": "http://www.microsoft.com/net/" },
-				{ "key": "dotnet20", "name": ".NET 2.0", "href": "http://www.microsoft.com/net/" },
-				{ "key": "dotnet35", "name": ".NET 3.5", "href": "http://www.microsoft.com/net/", "important": true },
-				{ "key": "dotnet40", "name": ".NET 4.0", "href": "http://www.microsoft.com/net/" },
+				{ "key": "dotnet20", "name": ".NET 2-4", "href": "http://www.microsoft.com/net/", "important": true },
 				{ "key": "aspnet", "name": "ASP.NET", "href": "http://www.asp.net/" },
 				{ "key": "aspnetmvc3", "name": "ASP.NET MVC 3", "href": "http://www.asp.net/mvc", "important": true },
 				{ "key": "ef", "name": "Entity Framework", "href": "http://msdn.microsoft.com/en-us/library/aa697427(v=vs.80).aspx", "important": true },
@@ -54,9 +51,11 @@
 				{ "key": "winforms", "name": "Windows Forms" },
 				{ "key": "wpf", "name": "WPF", "href": "http://msdn.microsoft.com/en-us/library/ms754130.aspx", "important": true },
 				{ "key": "wcf", "name": "WCF" },
-				{ "key": "msajax", "name": "Microsoft Ajax Library" },
 				{ "key": "jquery", "name": "jQuery", "href": "http://jquery.com", "important": true },
-				{ "key": "mfc", "name": "Microsoft Foundation Classes" }
+
+				{ "key": "dotnet11", "name": ".NET 1.1", "href": "http://www.microsoft.com/net/", "hidden": true },
+				{ "key": "msajax", "name": "Microsoft Ajax Library", "hidden": true },
+				{ "key": "mfc", "name": "Microsoft Foundation Classes", "hidden": true }
 			]
 		},
 		{
@@ -65,7 +64,7 @@
 				{ "key": "agile", "name": "Agile", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
 				{ "key": "waterfall", "name": "Waterfall", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
 				{ "key": "scrum", "name": "Scrum", "href": "http://en.wikipedia.org/wiki/Scrum_%28development%29" },
-				{ "key": "cowboy", "name": "Cowboy Coding", "href": "http://en.wikipedia.org/wiki/Cowboy_coding" }
+				{ "key": "cowboy", "name": "Cowboy Coding", "href": "http://en.wikipedia.org/wiki/Cowboy_coding", "hidden": true }
 			]
 		},
 		{
@@ -103,16 +102,14 @@
 		{
 			"name": "Software",
 			"skills": [
-				{ "key": "vs6", "name": "Visual Studio 6" },
-				{ "key": "vs2005", "name": "Visual Studio 2005" },
-				{ "key": "vs2008", "name": "Visual Studio 2008" },
-				{ "key": "vs2010", "name": "Visual Studio 2010", "important": true },
+				{ "key": "vsdotnet", "name": "Visual Studio 2005-2010", "important": true },
 				{ "key": "access2003", "name": "Access 2003" },
-				{ "key": "sql2000", "name": "SQL Server 2000" },
-				{ "key": "sql2008", "name": "SQL Server 2008", "important": true },
+				{ "key": "mssql", "name": "SQL Server 2000-2008", "important": true  },
 				{ "key": "sqlce4", "name": "SQL Server Compact 4.0" },
 				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" },
-				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" }
+				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" },
+
+				{ "key": "vs6", "name": "Visual Studio 6", "hidden": true }
 			]
 		}
 	],
@@ -128,42 +125,30 @@
 					"positions": [ 
 						{
 							"title": "Director of Development",
-							"details": "Led a team of 7 to enhance our applications and meet customers needs and deadlines, maintain our datacenter, manage and track goals and deadlines.",
 							"accomplishments": [
+								"Led a team of 7 to enhance our applications and meet customers needs and deadlines",
+								"Moved in-house servers to a state-of-the-art data center and increase our uptime to 5 9s",
 								"Created applications to allow low-budget clients to manage their own events, creating a new revenue stream",
-								"Implemented PCI standards to secure sensitive client data including credit cards and social security numbers"
+								"Implemented PCI standards to secure sensitive client data including credit cards and social security numbers",
+								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems"
 							],
 							"skillKeys": [
 								{ "key": "ccnet" },
 								{ "key": "agile" },
 								{ "key": "scrum" },
-								{ "key": "fogbugz" }
-							]
-						},
-						{
-							"title": "Lead Architect",
-							"details": "Responsible for doing the initial planning and development for all new software and features",
-							"accomplishments": [
-								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems",
-								"Created applications to assist account managers in assisting clients"
-							],
-							"skillKeys": [
-								{ "key": "ccnet" },
+								{ "key": "fogbugz" },
 								{ "key": "csharp" },
 								{ "key": "vbnet" },
 								{ "key": "dotnet11" },
 								{ "key": "dotnet20" },
-								{ "key": "dotnet35" },
-								{ "key": "dotnet40" },
 								{ "key": "aspnet" },
 								{ "key": "ef" },
 								{ "key": "javascript" },
 								{ "key": "jquery" },
 								{ "key": "msajax" },
-								{ "key": "sql2000" },
+								{ "key": "mssql" },
 								{ "key": "sqlce4" },
-								{ "key": "vs2005" },
-								{ "key": "vs2008" },
+								{ "key": "vsdotnet" },
 								{ "key": "wpf" },
 								{ "key": "wcf" },
 								{ "key": "xaml" },
@@ -175,8 +160,6 @@
 								{ "key": "payflowpro" },
 								{ "key": "aspnetmvc3" },
 								{ "key": "efcf" },
-								{ "key": "sql2008" },
-								{ "key": "vs2010" },
 								{ "key": "paypalwpp" },
 								{ "key": "braintree" }
 							]
@@ -192,9 +175,10 @@
 					"positions": [
 						{
 							"title": "Director of IT",
-							"details": "Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
 							"accomplishments": [ 
-								"Presented with a company that was lean on resources, created a series of tools to streamline work and reduce overhead."
+								"Presented with a company that was lean on resources, created a series of tools to streamline work and reduce overhead.",
+								"Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
+								"Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
 							],
 							"skillKeys": [
 								{ "key": "csharp" },
@@ -208,23 +192,13 @@
 								{ "key": "jquery" },
 								{ "key": "mdx" },
 								{ "key": "xna" },
-								{ "key": "vs2005" },
-								{ "key": "sql2000" }
-							]
-						},
-						{
-							"title": "Cowboy coder",
-							"accomplishments": [
-								"Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
-							],
-							"skillKeys": [
+								{ "key": "vsdotnet" },
+								{ "key": "mssql" },
 								{ "key": "cpp" },
 								{ "key": "opengl" },
 								{ "key": "mfc" },
 								{ "key": "vs6" },
-								{ "key": "xml" },
-								{ "key": "xslt" },
-								{ "key": "xpath" }
+								{ "key": "xslt" }
 							]
 						}
 					]
@@ -275,8 +249,8 @@
 								{ "key": "javascript" },
 								{ "key": "msajax" },
 								{ "key": "mfc" },
-								{ "key": "sql2000" },
-								{ "key": "vs2005" },
+								{ "key": "mssql" },
+								{ "key": "vsdotnet" },
 								{ "key": "xml" },
 								{ "key": "xslt" },
 								{ "key": "xpath" }
@@ -295,7 +269,6 @@
 								{ "key": "javascript" },
 								{ "key": "xml" },
 								{ "key": "xpath" },
-								{ "key": "dotnet40" },
 								{ "key": "aspnet" },
 								{ "key": "aspnetmvc3" },
 								{ "key": "ef" },
@@ -303,8 +276,8 @@
 								{ "key": "jquery" },
 								{ "key": "facebook" },
 								{ "key": "gmaps" },
-								{ "key": "vs2010" },
-								{ "key": "sql2008" },
+								{ "key": "vsdotnet" },
+								{ "key": "mssql" },
 								{ "key": "sqlce4" }
 							]
 						}
@@ -324,11 +297,11 @@
 								{ "key": "csharp" },
 								{ "key": "xml" },
 								{ "key": "xpath" },
-								{ "key": "dotnet35" },
+								{ "key": "dotnet20" },
 								{ "key": "tcp" },
 								{ "key": "xmpp" },
 								{ "key": "gtalk" },
-								{ "key": "vs2008" }
+								{ "key": "vsdotnet" }
 							]
 						}
 					]
@@ -350,14 +323,13 @@
 								{ "key": "xml" },
 								{ "key": "xpath" },
 								{ "key": "dotnet20" },
-								{ "key": "dotnet35" },
 								{ "key": "wpf" },
 								{ "key": "wcf" },
 								{ "key": "gps" },
 								{ "key": "ibus" },
 								{ "key": "obd2" },
 								{ "key": "fmod" },
-								{ "key": "vs2008" }
+								{ "key": "vsdotnet" }
 							]
 						}
 					]
@@ -379,7 +351,7 @@
 								{ "key": "facebook" },
 								{ "key": "gcontacts" },
 								{ "key": "exchangewebdav" },
-								{ "key": "vs2005" }
+								{ "key": "vsdotnet" }
 							]
 						}
 					]

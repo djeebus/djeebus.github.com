@@ -22,9 +22,12 @@
 		$('#text-template').template("text");
 
 		reportMessage('Binding commands ... ');
-		$('.change-template')
-			.click(function () { buildResumeUi($(this).attr('template-name')); return false; })
-			.each(function () { $(this).attr('href', '?template=' + $(this).attr('template-name')); });
+		$('a[template-name]').each(function () {
+			var a = $(this)
+			var templateName = a.attr('template-name');
+			a.attr('href', '?template=' + templateName);
+			a.html(templateName);
+		});
 		status.html('Fetching resume ... ');
 
 		$.ajax({
@@ -70,24 +73,37 @@
 	}
 
 	function buildResumeUi(templateName) {
-		$('#content').empty();
+		var content = $('#content');
 
-		var template = $.tmpl(templateName, myResume)
-		template.appendTo("#content");
+		content.empty();
 
-		if (templateName == 'html') {
-			$('#content').delegate('.skill-define,.skill-use', 'hover', function () {
-				var key = $(this).attr('skill-key');
-				var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
-				skills.toggleClass('skill-highlight');
-			})
-			.delegate('.toggle-skills', 'click', function () {
-				var parents = $(this).parents('.position-info')
-				parents.toggleClass('show-skills');
-			})
-			.delegate('.toggle-skills-catalog', 'click', function () {
-				$('.skills-category').toggle();
+		if (templateName == 'xml') {
+			var xml = $.json2xml(myResume, {
+				rootTagName: 'resume'
 			});
+			content.html(xml.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+		} else {
+			var template = $.tmpl(templateName, myResume)
+			template.appendTo("#content");
+
+			if (templateName == 'html') {
+				content.find('.skill-define,.skill-use').hover(function () {
+					var key = $(this).attr('skill-key');
+					var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
+					skills.toggleClass('skill-highlight');
+				});
+				content.find('.toggle-skills').hover(function () {
+					var parents = $(this).parents('.position-info')
+					parents.toggleClass('show-skills');
+				});
+			} else if (templateName == 'text') {
+				var version = getInternetExplorerVersion();
+				if (version != -1) {
+					var originalHtml = content.html();
+					var updatedHtml = originalHtml.replace(/\r\n\r\n/g, '\r\n');
+					content.html(updatedHtml);
+				}
+			}
 		}
 	}
 
@@ -126,18 +142,6 @@
 
 			return { key: key, name: key, category: "Skills" };
 		};
-
-		resume.importantSkills = [];
-
-		for (var cIndex = 0; cIndex < resume.catalog.length; cIndex++) {
-			var c = resume.catalog[cIndex];
-			for (var sIndex = 0; sIndex < c.skills.length; sIndex++) {
-				var s = c.skills[sIndex];
-				if (s.important) {
-					resume.importantSkills[resume.importantSkills.length++] = s;
-				}
-			}
-		}
 
 		var types = resume.experienceTypes;
 		for (var tIndex = 0; tIndex < types.length; tIndex++) {
@@ -185,16 +189,6 @@
 							}
 
 							category.skills[category.skills.length] = skill;
-
-							category.skills.sort(function (a, b) {
-								if (a.name < b.name) {
-									return -1;
-								} else if (a.name == b.name) {
-									return 0;
-								} else {
-									return 1;
-								}
-							});
 						}
 					}
 				}
@@ -202,5 +196,33 @@
 		}
 
 		return resume;
+	}
+
+	// copied from http://msdn.microsoft.com/en-us/library/ms537509%28v=vs.85%29.aspx
+
+	function getInternetExplorerVersion()
+	// Returns the version of Internet Explorer or a -1
+	// (indicating the use of another browser).
+	{
+		var rv = -1; // Return value assumes failure.
+		if (navigator.appName == 'Microsoft Internet Explorer') {
+			var ua = navigator.userAgent;
+			var re = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+			if (re.exec(ua) != null)
+				rv = parseFloat(RegExp.$1);
+		}
+		return rv;
+	}
+	function checkVersion() {
+		var msg = "You're not using Internet Explorer.";
+		var ver = getInternetExplorerVersion();
+
+		if (ver > -1) {
+			if (ver >= 8.0)
+				msg = "You're using a recent copy of Internet Explorer."
+			else
+				msg = "You should upgrade your copy of Internet Explorer.";
+		}
+		alert(msg);
 	}
 })(jQuery);

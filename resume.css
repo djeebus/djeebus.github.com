@@ -7,14 +7,13 @@ html, body {
 	font-family: Verdana, Verdana, Geneva, sans-serif;
 	font-size: 14px;
 }
-body { 
+body {
 	margin: 0 1em;
 	color: White;
 	background-color: Black;
 }
 h1 {
 	text-align: center;
-	margin-bottom: .5em;
 }
 h2 {
 	text-align: center;
@@ -23,10 +22,18 @@ p {
 	margin: .5em 0;
 }
 pre {
-	white-space: pre-wrap;
+	white-space: pre-wrap; /* css-3 */
+	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */ 
+	/* width: 99%; */
+	word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 ul {
 	list-style-type: none;
+}
+a, a:header, a:link, a:visite {
+	color: #5BC2EB;
 }
 
 #header {
@@ -35,19 +42,15 @@ ul {
 #header ul, #header ul li {
 	display: inline;
 }
-#header a,
-#header a:visited,
-#header a:link {
+#header a, #header a:visited, #header a:link {
 	color: #2BF0EC;
 }
 #content {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-
 	background-color: White;
 	color: Black;
-
 	margin: 0 auto;
 	padding: 1em;
 }
@@ -63,6 +66,7 @@ ul {
 }
 .section {
 	clear: both;
+	margin-bottom: 1em;
 }
 .curved {
 	border: solid thin black;
@@ -96,31 +100,21 @@ p.description {
 	text-align: left;
 }
 .preamble {
-	margin-bottom: 1em;
 }
 .preamble h2 {
 	clear: both;
 }
 .preamble ul {
 	list-style-type: circle;
-	height: 6em;
-	padding-bottom: 1em;
+	height: 5em; /* hack: couldn't figure out how to get the ul to have a height AND let <li /> elements float */
 }
 .preamble ul li {
 	width: 26em;
 	margin-left: 2em;
 	float: left;
 }
-.skills-container {
-	padding: 1em;
-	margin-top: 1em;
-	display: block;
-	width: 15em;
-	float: right;
-	
-	/* hack: off by 1em due to floats */
-	position: relative;
-	top: -1em;
+.skills-container h2 {
+	font-size: 1.1em;
 }
 .skills-container .toggle-skills-catalog {
 	float: right;
@@ -128,19 +122,25 @@ p.description {
 .skills-container .skills-category {
 	padding-right: 1em;
 }
+.skills-container .skills-category * {
+	display: inline;
+}
+.skills-container .skills-category .skill-define {
+	margin-right: 1em;
+}
+.skills-container .skills-category .skill-define.deprecated, .skills-container .skills-category .skill-define.deprecated a:link, .skills-container .skills-category .skill-define.deprecated a:visited {
+	color: #AAA;
+}
 .skills-container .skills-category .skill-define.important {
 	background-image: url(smooth-star.jpg);
 	background-repeat: no-repeat;
 	background-position: right center;
+	padding-right: 1em;
 }
 .skill-highlight {
 	background-color: #EFEB4B !important;
 }
 .experiences {
-	clear: left;
-	padding: 1em;
-	width: 40em;
-	margin-top: 1em;
 }
 .experiences .experience:last-child {
 	margin-bottom: 0;
@@ -165,6 +165,8 @@ p.description {
 	margin-left: 2em;
 }
 .experiences .experience .toggle-skills {
+	text-decoration: none;
+	border-bottom: 1px blue dashed;
 	font-size: .8em;
 	float: right;
 }
@@ -208,14 +210,8 @@ p.description {
 		text-decoration: none;
 		color: Black;
 	}
-	.skills-container {
-		float: none;
-		width: 100%;
-		page-break-after: always;
-	}
-	.skills-container .skills-category {
-		float: left;
-		height: 20em;
+	a.deprecated {
+		display: none;
 	}
 	.experiences {
 		float: none;

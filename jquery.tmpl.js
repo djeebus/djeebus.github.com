@@ -322,7 +322,7 @@
 				.replace(/([\\'])/g, "\\$1")
 		//				.replace( /[\r\t\n]/g, " " ) // original
 				//.replace(/[\t]/g, "     ") // tab hack
-				.replace(/[\r\n]/g, "\\\n\\n") // new line hack
+				.replace(/[\r\n]/g, "\\\r\\n") // new line hack
 				.replace(/\$\{([^\}]*)\}/g, "{{= $1}}")
 				.replace(/\{\{(\/?)(\w+|.)(?:\(((?:[^\}]|\}(?!\}))*?)?\))?(?:\s+(.*?)?)?(\(((?:[^\}]|\}(?!\}))*?)\))?\s*\}\}/g,
 				function (all, slash, type, fnargs, target, parens, args) {

@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 	<head>
 		<title>Joseph Lombrozo's Resume</title>
@@ -5,6 +6,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.js"></script>
 		<!--<script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>-->
 		<script type="text/javascript" src="jquery.tmpl.js"></script>
+		<script type="text/javascript" src="jquery.json2xml.js"></script>
 		<script type="text/javascript" src="resume.js"></script>
 		<link type="text/css" rel="Stylesheet" href="resume.css" />
 	</head>
@@ -22,13 +24,14 @@ ${preamble.content}
 EXPERTISE{{each expertise}}
   * ${this}{{/each}}
 
-SKILL HIGHLIGHTS{{each importantSkills}}
-  * ${name}{{/each}}
+SKILL HIGHLIGHTS{{each catalog}}
+  ${name.toUpperCase()}: {{each skills}}{{if !(typeof hidden == 'undefined' ? false : hidden)}}{{if $index > 0}} | {{/if}}${name}{{/if}}{{/each}}{{/each}}
 
-{{each experienceTypes}}${name.toUpperCase()}{{each experiences}}
+{{each experienceTypes}}${name.toUpperCase()}
+{{each experiences}}
   ${company.toUpperCase()} {{if timespan}}(${timespan}){{/if}}{{if locale}} ${locale}{{/if}}
 {{if description}}  ${description}{{/if}}
-{{each positions}}  - ${title}{{if details}}
+{{each positions}}  ${title}{{if details}}
     ${details}{{/if}}
 {{each accomplishments}}    * ${this}
 {{/each}}{{/each}}{{/each}}
@@ -36,7 +39,7 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 			</pre>
 		</script>
 		<script id="html-template" type="text/x-jquery-tmpl">
-			<div class="section">
+			<div class="header section">
 				<ul class="basic-info">
 					<li>${developer.name}</li>
 					<li>${developer.city}, ${developer.state}</li>
@@ -69,29 +72,22 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 				<h1>${preamble.title}</h1>
 				<p>{{html preamble.content}}</p>
 
-				<h2>Accomplishments</h2>
+				<h1>Accomplishments</h1>
 				<ul id="important-accomplishments">
 				{{each expertise}}
-					<li>${$value}</li>
-				{{/each}}
-				</ul>
-
-				<h2>Skill Highlights</h2>
-				<ul id="important-skills">
-				{{each importantSkills}}
-					<li class="skill-define" skill-key="${key}">${name}</li>
+					<li>${this}</li>
 				{{/each}}
 				</ul>
 			</div>
 
-			<div class="skills-container curved">
-				<h1>My Skills</h1>
+			<div class="skills-container section">
+				<h1>Skill Highlights</h1>
 				{{each catalog}}
 					<div class="skills-category">
 						<h2>${name}</h2>
 						<ul>
 						{{each skills}}
-							<li class="skill-define ${key} ${$value.important ? 'important' : ''}" skill-key="${key}">
+							<li class="skill-define ${key} ${this.important ? 'important' : ''} ${this.hidden ? 'deprecated' : ''}" skill-key="${key}">
 							{{if href}}
 								<a href="${href}" target="_blank">${name}</a>
 							{{else}}
@@ -102,7 +98,6 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 						</ul>
 					</div>
 				{{/each}}
-				<br style="float: none; clear: both;" />
 			</div>
 
 			<div class="experiences section">
@@ -110,9 +105,8 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 				<h2>${name}</h2>
 				{{each experiences}}
 					<div class="${type} experience">
-						<h3><span class="company">${company}</span></h3>
+						<h3><span class="company">${company}</span>{{if timespan}}<span class="timespan">${timespan}</span>{{/if}}</h3>
 						<div class="company-details">
-							{{if timespan}}<span class="timespan">${timespan}</span>{{/if}}
 							{{if locale}}<span class="locale">${locale}</span>{{/if}}
 						</div>
 						<p class="description">${description}</p>
@@ -149,9 +143,10 @@ SKILL HIGHLIGHTS{{each importantSkills}}
 		<div id="header">
 			Alternate formats: 
 			<ul>
-				<li><a class="change-template" template-name="html" href="?template=html">html</a></li>
-				<li><a class="change-template" template-name="text" href="?template=text">txt</a></li>
+				<li><a template-name="html">html</a></li>
+				<li><a template-name="text">txt</a></li>
 				<li><a href="resume.json">json</a></li>
+				<li><a template-name="xml" href="javscript:void(0)">xml</a></li>
 			</ul>
 		</div>
 		<div id="content" class="curved"></div>
