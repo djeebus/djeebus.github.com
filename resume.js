@@ -79,9 +79,10 @@
 
 		if (templateName == 'xml') {
 			var xml = $.json2xml(myResume, {
-				rootTagName: 'resume'
+				rootTagName: 'resume',
+				formatOutput: true
 			});
-			content.html(xml.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+			content.html('<pre>' + xml.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
 		} else {
 			var template = $.tmpl(templateName, myResume)
 			template.appendTo("#content");
