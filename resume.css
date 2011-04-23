@@ -228,6 +228,9 @@ p.description {
 		float: none;
 		width: 100%;
 	}
+	.experience {
+		page-break-inside: avoid;
+	}
 	.curved {
 		border: 0;
 	}

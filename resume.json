@@ -184,12 +184,12 @@
 					"end": 2007,
 					"company": "Universal Metals",
 					"locale": "Orange, CA",
-					"description": "Leading metal supplier for southern california industrial needs including aerospace, government, and engineering firms.",
+					"description": "Leading metal supplier for southern california industries including aerospace, government, and engineering firms.",
 					"positions": [
 						{
 							"title": "Director of IT",
 							"accomplishments": [ 
-								"Presented with a company that was lean on resources, created a series of tools to streamline work and reduce overhead.",
+								"Presented with a company that was lean on resources, created tools to streamline work and reduce overhead.",
 								"Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
 								"Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
 							],
@@ -353,6 +353,9 @@
 					"positions": [
 						{
 							"title": "Cowboy coder",
+							"accomplishments": [
+								"Interfaced with 3rd party web services including facebook, exchange, and google contacts"
+							],
 							"skillKeys": [
 								{ "key": "csharp" },
 								{ "key": "xml" },
