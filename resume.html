@@ -21,7 +21,7 @@ ${method}: {{if method == 'linkedin'}}linkedin.com/in/${value}{{else}}${value}{{
 ${preamble.title.toUpperCase()}
 ${preamble.content}
 
-EXPERTISE{{each expertise}}
+AREAS OF EXPERTISE{{each expertise}}
   * ${this}{{/each}}
 
 SKILL HIGHLIGHTS{{each catalog}}
@@ -72,7 +72,7 @@ SKILL HIGHLIGHTS{{each catalog}}
 				<h1>${preamble.title}</h1>
 				<p>{{html preamble.content}}</p>
 
-				<h1>Accomplishments</h1>
+				<h1>Areas of Expertise</h1>
 				<ul id="important-accomplishments">
 				{{each expertise}}
 					<li>${this}</li>

@@ -14,15 +14,14 @@
 	],
 	"preamble": {
 		"title": "Software Architect",
-		"content": "Innovative and resourceful lead architect with 10 years of experience specializing in building easily maintainable and surprisingly functional applications. Recognized and took advantage of opportunities for new revenue streams for small businesses in various industries. Meets deadlines and exceeds expectations in adverse situations."
+		"content": "Innovative and resourceful lead architect with 10 years of experience in transforming legacy software into easily maintainable, flexible and functional frameworks and applications. Recognized for ability to seek and capitilize on opportunities for new revenue streams for small businesses in various industries. Strong track record of meeting deadlines and exceeding customer expectations in short timeframes."
 	},
 	"expertise": [
-		"Requirements gathering",
-		"Leading a team of developers",
+		"Team development and mentorship",
+		"Cross-function coordination",
 		"Architecting large-scale software projects",
-		"Understanding and implementing business requirements",
-		"Implementing 3rd party services and libraries",
-		"Writing easily-maintained and understandable code"
+		"Integrating 3rd party services and modules",
+		"Writing easily-maintained and readable code"
 	],
 	"catalog": [
 		{
@@ -103,12 +102,12 @@
 			"name": "Software",
 			"skills": [
 				{ "key": "vsdotnet", "name": "Visual Studio 2005-2010", "important": true },
-				{ "key": "access2003", "name": "Access 2003" },
 				{ "key": "mssql", "name": "SQL Server 2000-2008", "important": true  },
 				{ "key": "sqlce4", "name": "SQL Server Compact 4.0" },
 				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" },
 				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" },
 
+				{ "key": "access2003", "name": "Access 2003", "hidden": true },
 				{ "key": "vs6", "name": "Visual Studio 6", "hidden": true }
 			]
 		}
