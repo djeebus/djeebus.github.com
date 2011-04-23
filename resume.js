@@ -34,6 +34,7 @@
 			type: "GET",
 			url: "resume.json",
 			dataType: "json",
+			cache: false,
 			success: function (data) {
 				try {
 					myResume = data;
@@ -88,11 +89,13 @@
 			template.appendTo("#content");
 
 			if (templateName == 'html') {
+				/*
 				content.find('.skill-define,.skill-use').hover(function () {
 					var key = $(this).attr('skill-key');
 					var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
 					skills.toggleClass('skill-highlight');
 				});
+				*/
 				content.find('.toggle-skills').hover(function () {
 					var parents = $(this).parents('.position-info')
 					parents.toggleClass('show-skills');

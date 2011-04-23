@@ -114,7 +114,16 @@ p.description {
 	float: left;
 }
 .skills-container h2 {
-	font-size: 1.1em;
+	clear: left;
+	display: block;
+	float: left;
+	text-align: left;
+	width: 10em;
+
+	font-size: 1em;
+}
+.skills-container a {
+	color: Black;
 }
 .skills-container .toggle-skills-catalog {
 	float: right;
@@ -124,19 +133,21 @@ p.description {
 }
 .skills-container .skills-category * {
 	display: inline;
+	line-height: 1.2em;
 }
 .skills-container .skills-category .skill-define {
-	margin-right: 1em;
+	margin-right: .5em;
 }
 .skills-container .skills-category .skill-define.deprecated, .skills-container .skills-category .skill-define.deprecated a:link, .skills-container .skills-category .skill-define.deprecated a:visited {
-	color: #AAA;
+	/* color: #AAA; */
+	display: none;
 }
-.skills-container .skills-category .skill-define.important {
+/*.skills-container .skills-category .skill-define.important {
 	background-image: url(smooth-star.jpg);
 	background-repeat: no-repeat;
 	background-position: right center;
 	padding-right: 1em;
-}
+}*/
 .skill-highlight {
 	background-color: #F7EDC1;
 }

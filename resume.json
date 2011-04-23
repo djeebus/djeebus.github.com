@@ -17,11 +17,12 @@
 		"content": "Innovative and resourceful lead architect with 10 years of experience in transforming legacy software into easily maintainable, flexible and functional frameworks and applications. Recognized for ability to seek and capitilize on opportunities for new revenue streams for small businesses in various industries. Strong track record of meeting deadlines and exceeding customer expectations in short timeframes."
 	},
 	"expertise": [
-		"Team development and mentorship",
-		"Cross-function coordination",
+		"Team development and mentoring",
+		"Cross-functional coordination",
 		"Architecting large-scale software projects",
-		"Integrating 3rd party services and modules",
-		"Writing easily-maintained and readable code"
+		"3rd party service and module integration",
+		"Easily-maintainable and efficient code",
+		"Legacy software transformation"
 	],
 	"catalog": [
 		{
@@ -40,20 +41,25 @@
 			]
 		},
 		{
+			"name": "Web Frameworks",
+			"skills": [
+				{ "key": "aspnet", "name": "ASP.NET", "href": "http://www.asp.net/" },
+				{ "key": "aspnetmvc3", "name": "ASP.NET MVC 3", "href": "http://www.asp.net/mvc", "important": true },
+				{ "key": "wcf", "name": "WCF" },
+				{ "key": "jquery", "name": "jQuery", "href": "http://jquery.com", "important": true },
+				{ "key": "msajax", "name": "Microsoft Ajax Library", "hidden": true }
+			]
+		},
+		{
 			"name": "Frameworks",
 			"skills": [
 				{ "key": "dotnet20", "name": ".NET 2-4", "href": "http://www.microsoft.com/net/", "important": true },
-				{ "key": "aspnet", "name": "ASP.NET", "href": "http://www.asp.net/" },
-				{ "key": "aspnetmvc3", "name": "ASP.NET MVC 3", "href": "http://www.asp.net/mvc", "important": true },
 				{ "key": "ef", "name": "Entity Framework", "href": "http://msdn.microsoft.com/en-us/library/aa697427(v=vs.80).aspx", "important": true },
 				{ "key": "efcf", "name": "EF CodeFirst", "href": "http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx" },
 				{ "key": "winforms", "name": "Windows Forms" },
 				{ "key": "wpf", "name": "WPF", "href": "http://msdn.microsoft.com/en-us/library/ms754130.aspx", "important": true },
-				{ "key": "wcf", "name": "WCF" },
-				{ "key": "jquery", "name": "jQuery", "href": "http://jquery.com", "important": true },
 
 				{ "key": "dotnet11", "name": ".NET 1.1", "href": "http://www.microsoft.com/net/", "hidden": true },
-				{ "key": "msajax", "name": "Microsoft Ajax Library", "hidden": true },
 				{ "key": "mfc", "name": "Microsoft Foundation Classes", "hidden": true }
 			]
 		},
@@ -79,23 +85,32 @@
 			]
 		},
 		{
-			"name": "APIs",
+			"name": "Payment APIs",
 			"skills": [
 				{ "key": "authorizenet", "name": "Authorize.Net", "href": "http://www.authorize.net" },
 				{ "key": "braintree", "name": "Braintree", "href": "http://www.braintreepaymentsolutionscom" },
 				{ "key": "cybersource", "name": "Cybersource", "href": "http://www.cybersource.com"},
+				{ "key": "paypalwpp", "name": "PayPal Website Payments Pro", "href": "https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content&content_ID=merchant/wp_pro" },
+				{ "key": "payflowpro", "name": "PayPal Payflow Pro", "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside" }
+			]
+		},
+		{
+			"name": "Web APIs",
+			"skills": [
 				{ "key": "exchangewebdav", "name": "Exchange 2003 Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
 				{ "key": "facebook", "name": "Facebook", "href": "http://developers.facebook.com/", "important": true },
-				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" },
 				{ "key": "gcontacts", "name": "Google Contacts", "href": "http://code.google.com/apis/contacts/" },
 				{ "key": "gtalk", "name": "Google Talk", "href": "http://code.google.com/apis/talk/" },
-				{ "key": "gmaps", "name": "Google Maps", "href": "http://code.google.com/apis/maps/" },
+				{ "key": "gmaps", "name": "Google Maps", "href": "http://code.google.com/apis/maps/" }
+			]
+		},
+		{
+			"name": "Media APIs",
+			"skills": [
+				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" },
 				{ "key": "mdx", "name": "Managed DirectX", "href": "http://mdxinfo.com/" },
 				{ "key": "opengl", "name": "OpenGL", "href": "http://www.opengl.org/" },
-				{ "key": "oledb", "name": "OLE DB", "href": "http://en.wikipedia.org/wiki/OLE_DB" },
-				{ "key": "paypalwpp", "name": "PayPal Website Payments Pro", "href": "https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content&content_ID=merchant/wp_pro" },
-				{ "key": "xna", "name": "XNA", "href": "http://msdn.microsoft.com/en-us/aa937791" },
-				{ "key": "payflowpro", "name": "PayPal Payflow Pro", "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside" }
+				{ "key": "xna", "name": "XNA", "href": "http://msdn.microsoft.com/en-us/aa937791" }
 			]
 		},
 		{
@@ -103,7 +118,7 @@
 			"skills": [
 				{ "key": "vsdotnet", "name": "Visual Studio 2005-2010", "important": true },
 				{ "key": "mssql", "name": "SQL Server 2000-2008", "important": true  },
-				{ "key": "sqlce4", "name": "SQL Server Compact 4.0" },
+				{ "key": "sqlce4", "name": "SQL CE 4.0" },
 				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" },
 				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" },
 
@@ -118,18 +133,17 @@
 			"experiences": [
 				{
 					"start": 2007,
-					"company": "Orchid Event Solutions / The Housing Connection",
+					"company": "Orchid Event Solutions",
 					"locale": "Salt Lake City, UT",
 					"description": "Provides customized registration and housing solutions for international corporate events, including data integration, payments, lead retrieval, credentials, and onsite support.",
 					"positions": [ 
 						{
 							"title": "Director of Development",
 							"accomplishments": [
-								"Led a team of 7 to enhance our applications and meet customers needs and deadlines",
-								"Moved in-house servers to a state-of-the-art data center and increase our uptime to 5 9s",
-								"Created applications to allow low-budget clients to manage their own events, creating a new revenue stream",
-								"Implemented PCI standards to secure sensitive client data including credit cards and social security numbers",
-								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems"
+								"Took 98% uptime ecosystem and moved servers to a state-of-the-art data center to achieve 99.999% uptime. Plan was executed within maintenance window and at 5% of the expected cost.",
+								"Created client-facing applications to allow low-budget clients to manage their own events, which opened a new market segment, created a new revenue stream, and reduced the workload on development staff",
+								"Found unencrypted client data (including credit cards and social security numbers) and researched and implemented PCI standards using state-of-the-art encryption methods to protect",
+								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems and revenue leakage"
 							],
 							"skillKeys": [
 								{ "key": "ccnet" },
