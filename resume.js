@@ -1,6 +1,10 @@
+// enclosure to prevent dirtying up the global namespace
 (function ($) {
+	// local field to keep track of the resume view model
 	var myResume;
 
+	// provides a simple syntax for pulling querystring variables
+	// copied from ... somewhere, don't remember
 	var urlParams = {};
 	(function () {
 		var e,
@@ -14,12 +18,11 @@
 	})();
 
 	$(document).ready(function () {
-		// initialize the status bar
-		var status = $('#status');
-
 		reportMessage('Precompiling templates ... ');
-		$('#html-template').template("html");
-		$('#text-template').template("text");
+		$('.resume-template').each(function () {
+			var t = $(this);
+			t.template(t.attr('id'));
+		});
 
 		reportMessage('Binding commands ... ');
 		$('a[template-name]').each(function () {
@@ -28,8 +31,13 @@
 			a.attr('href', '?template=' + templateName);
 			a.html(templateName);
 		});
-		status.html('Fetching resume ... ');
+		$('#content').delegate('.toggle-skills', 'hover', function () {
+			var parents = $(this).parents('.position-info')
+			parents.toggleClass('show-skills');
+		});
 
+
+		reportMessage('Fetching resume ... ');
 		$.ajax({
 			type: "GET",
 			url: "resume.json",
@@ -38,12 +46,16 @@
 			success: function (data) {
 				try {
 					myResume = data;
+
+					reportMessage('Building view model ... ');
 					buildViewModel(myResume);
 
-					var t = urlParams.template;
-					if (typeof t == 'undefined') {
-						t = 'html';
+					var t = urlParams.template; 	// get requested template type
+					if (typeof t == 'undefined') {	// if no specific template is requested
+						t = 'html'; 					// set default template type
 					}
+
+					reportMessage('Build resume');
 					buildResumeUi(t);
 
 					$('#status').hide();
@@ -76,50 +88,36 @@
 	function buildResumeUi(templateName) {
 		var content = $('#content');
 
+		// clear original content
 		content.empty();
 
 		if (templateName == 'xml') {
+			// convert json to xml
 			var xml = $.json2xml(myResume, {
 				rootTagName: 'resume',
 				formatOutput: true
 			});
-			content.html('<pre>' + xml.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre>');
+
+			// escape invalid xml characters
+			var escapedXml = xml.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+			// render xml in <pre /> tag to preserve spacing
+			content.html('<pre>' + escapedXml +'</pre>');
 		} else {
+			// all other templates are simply jquery.tmpl templates
 			var template = $.tmpl(templateName, myResume)
 			template.appendTo("#content");
 
-			if (templateName == 'html') {
-				/*
-				content.find('.skill-define,.skill-use').hover(function () {
-					var key = $(this).attr('skill-key');
-					var skills = $('[skill-key="' + key + '"],.experience:has([skill-key="' + key + '"])')
-					skills.toggleClass('skill-highlight');
-				});
-				*/
-				content.find('.toggle-skills').hover(function () {
-					var parents = $(this).parents('.position-info')
-					parents.toggleClass('show-skills');
-				});
-			} else if (templateName == 'text') {
+			if (templateName == 'text') {
 				var version = getInternetExplorerVersion();
 				if (version != -1) {
+					// hack: internet explorer seems to double every breakline, 
+					// so remove them and replace the broken content w/ the updated version
 					var originalHtml = content.html();
 					var updatedHtml = originalHtml.replace(/\r\n\r\n/g, '\r\n');
 					content.html(updatedHtml);
 				}
 			}
-		}
-	}
-
-	function sortByName(a, b) {
-		var xa = a.name.toUpperCase(), xb = b.name.toUpperCase();
-
-		if (xa == xb) {
-			return 0;
-		} else if (xa < xb) {
-			return -1;
-		} else {
-			return 1;
 		}
 	}
 
@@ -203,7 +201,6 @@
 	}
 
 	// copied from http://msdn.microsoft.com/en-us/library/ms537509%28v=vs.85%29.aspx
-
 	function getInternetExplorerVersion()
 	// Returns the version of Internet Explorer or a -1
 	// (indicating the use of another browser).
@@ -216,17 +213,5 @@
 				rv = parseFloat(RegExp.$1);
 		}
 		return rv;
-	}
-	function checkVersion() {
-		var msg = "You're not using Internet Explorer.";
-		var ver = getInternetExplorerVersion();
-
-		if (ver > -1) {
-			if (ver >= 8.0)
-				msg = "You're using a recent copy of Internet Explorer."
-			else
-				msg = "You should upgrade your copy of Internet Explorer.";
-		}
-		alert(msg);
 	}
 })(jQuery);

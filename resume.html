@@ -11,7 +11,7 @@
 		<link type="text/css" rel="Stylesheet" href="resume.css" />
 	</head>
 	<body>
-		<script id="text-template" type="text/x-jquery-tmpl">
+		<script id="text" class="resume-template" type="text/x-jquery-tmpl">
 			<pre>
 ${developer.name}
 ${developer.city}, ${developer.state}
@@ -38,7 +38,7 @@ SKILL HIGHLIGHTS{{each catalog}}
 {{/each}}
 			</pre>
 		</script>
-		<script id="html-template" type="text/x-jquery-tmpl">
+		<script id="html" class="resume-template" type="text/x-jquery-tmpl">
 			<div class="header section">
 				<ul class="basic-info">
 					<li>${developer.name}</li>
@@ -148,6 +148,8 @@ SKILL HIGHLIGHTS{{each catalog}}
 				<li><a href="resume.json">json</a></li>
 				<li><a template-name="xml" href="javscript:void(0)">xml</a></li>
 			</ul>
+
+			<a class="readme" href="README.txt">README</a>
 		</div>
 		<div id="content" class="curved"></div>
 		<div id="footer">

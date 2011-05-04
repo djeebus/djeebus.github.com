@@ -32,7 +32,7 @@ pre {
 ul {
 	list-style-type: none;
 }
-a, a:header, a:link, a:visite {
+a, a:header, a:link, a:visited {
 	color: #5BC2EB;
 }
 
@@ -44,6 +44,9 @@ a, a:header, a:link, a:visite {
 }
 #header a, #header a:visited, #header a:link {
 	color: #2BF0EC;
+}
+#header .readme {
+	float: right;
 }
 #content {
 	min-height: 100%;
