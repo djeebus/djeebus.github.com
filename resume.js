@@ -31,6 +31,16 @@
 			a.attr('href', '?template=' + templateName);
 			a.html(templateName);
 		});
+		$('a[template-name]').click(function () {
+			var a = $(this)
+
+			var templateName = a.attr('template-name');
+
+			a.attr('href', 'javascript:void(0)');
+			a.html(templateName);
+
+			buildResumeUi(templateName);
+		});
 		$('#content').delegate('.toggle-skills', 'hover', function () {
 			var parents = $(this).parents('.position-info')
 			parents.toggleClass('show-skills-hover');
