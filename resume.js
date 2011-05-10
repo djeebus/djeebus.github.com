@@ -49,10 +49,12 @@
 		$('#content').delegate('.toggle-skills', 'click', function () {
 			var parents = $(this).parents('.position-info')
 			parents.toggleClass('show-skills-click');
+			return false;
 		});
 		$('#content').delegate('.skills-used-container .close-command a', 'click', function () {
 			var parents = $(this).parents('.position-info')
 			parents.removeClass('show-skills-click');
+			return false;
 		});
 
 

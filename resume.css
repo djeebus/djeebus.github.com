@@ -21,6 +21,10 @@ h2 {
 p {
 	margin: .5em 0;
 }
+a {
+	color: Blue;
+	cursor: pointer;
+}
 pre {
 	white-space: pre-wrap; /* css-3 */
 	white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
@@ -56,6 +60,7 @@ a, a:header, a:link, a:visited {
 	color: Black;
 	margin: 0 auto;
 	padding: 1em;
+	width: 60em;
 }
 #footer {
 	clear: both;
@@ -63,9 +68,6 @@ a, a:header, a:link, a:visited {
 #status {
 	float: right;
 	padding: .5em;
-}
-#content {
-	width: 60em;
 }
 .section {
 	clear: both;
@@ -114,7 +116,7 @@ p.description {
 }
 .preamble ul {
 	list-style-type: circle;
-	height: 5em; /* hack: couldn't figure out how to get the ul to have a height AND let <li /> elements float */
+	height: 4em; /* hack: couldn't figure out how to get the ul to have a height AND let <li /> elements float */
 }
 .preamble ul li {
 	width: 26em;
@@ -236,9 +238,21 @@ p.description {
 @media print {
 	body {
 		color: White;
+		font-size: 11px;
+	}
+	#content {
+		width: auto !important;
+		margin: 1em !important;
 	}
 	#footer, #header, .toggle-skills, .skype-commands {
 		display: none;
+	}
+	.links {
+		text-align: left !important;
+	}
+	.links a:link:after, .links a:visited:after {
+		content: " (" attr(href) ") ";
+		font-size: 90%;
 	}
 	a {
 		text-decoration: none;
