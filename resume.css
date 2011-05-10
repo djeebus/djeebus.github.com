@@ -81,26 +81,31 @@ p.description {
 	margin-left: 2em;
 }
 
-.basic-info {
+.header .basic-info {
+	width: 33%;
+	margin: 0 auto;
+}
+.header .contact-info {
 	float: left;
+	width: 33%;
 }
-.contact-info {
-	float: right;
-	width: 20em;
-}
-.contact-info .method {
+.header .contact-info .method {
 	clear: left;
 	display: block;
 	float: left;
 	padding-right: .5em;
 	text-align: right;
-	width: 5em;
+	width: 3em;
 }
-.contact-info .value {
+.header .contact-info .value {
 	clear: right;
 	display: block;
 	float: left;
 	text-align: left;
+}
+.header .links {
+	float: right;
+	text-align: right;
 }
 .preamble {
 }
@@ -141,7 +146,9 @@ p.description {
 .skills-container .skills-category .skill-define {
 	margin-right: .5em;
 }
-.skills-container .skills-category .skill-define.deprecated, .skills-container .skills-category .skill-define.deprecated a:link, .skills-container .skills-category .skill-define.deprecated a:visited {
+.skills-container .deprecated, 
+.skills-container .deprecated a:link, 
+.skills-container .deprecated a:visited {
 	/* color: #AAA; */
 	display: none;
 }
@@ -198,6 +205,10 @@ p.description {
 	padding: 0.5em;
 	z-index: 100;
 }
+.skills-used-container .close-command {
+	display: none;
+	float: right;
+}
 .skills-used-container h2 {
 	display: inline;
 }
@@ -212,8 +223,15 @@ p.description {
 .skills-used-container ul li:first-child {
 	border-left: 0;
 }
-.show-skills .skills-used-container {
+.show-skills-hover .skills-used-container,
+.show-skills-click .skills-used-container {
 	display: block;
+}
+.show-skills-click .skills-used-container .close-command {
+	display: block;
+}
+.show-skills-click .skills-used-container .skills-category {
+	padding-right: 2em;
 }
 @media print {
 	body {
@@ -233,7 +251,7 @@ p.description {
 		float: none;
 		width: 100%;
 	}
-	.experience {
+	.experiences, .experience {
 		page-break-inside: avoid;
 	}
 	.curved {

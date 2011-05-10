@@ -40,15 +40,16 @@ SKILL HIGHLIGHTS{{each catalog}}
 		</script>
 		<script id="html" class="resume-template" type="text/x-jquery-tmpl">
 			<div class="header section">
-				<ul class="basic-info">
-					<li>${developer.name}</li>
-					<li>${developer.city}, ${developer.state}</li>
-				</ul>
-
 				<ul class="contact-info">
 				{{each contact}}
 					<li>
-						<span class="method">${method}</span>
+						<span class="method">
+							{{if title}}
+								${title}
+							{{else}}
+								${method}
+							{{/if}}
+						</span>
 
 						<span class="value">
 						{{if method == "email"}}
@@ -57,14 +58,24 @@ SKILL HIGHLIGHTS{{each catalog}}
 							<a href="gtalk:chat?jid=${value}">${value}</a>
 						{{else method == "skype"}}
 							${value} <span class="skype-commands">(<a href="skype:${value}?call">call</a> or <a href="skype:${value}?chat">chat</a>)</span>
-						{{else method == "linkedin"}}
-							<a href="http://linkedin.com/in/${value}" target="_blank">${value}</a>
 						{{else}}
 							${value}
 						{{/if}}
 						</span>
 					</li>
 				{{/each}}
+				</ul>
+
+				<ul class="links">
+					{{each links}}
+						<li><a href="${href}" target="_blank">${title}</a></li>
+					{{/each}}
+							
+				</ul>
+
+				<ul class="basic-info">
+					<li class="name">${developer.name}</li>
+					<li class="location">${developer.city}, ${developer.state}</li>
 				</ul>
 			</div>
 
@@ -83,7 +94,7 @@ SKILL HIGHLIGHTS{{each catalog}}
 			<div class="skills-container section">
 				<h1>Skill Highlights</h1>
 				{{each catalog}}
-					<div class="skills-category">
+					<div class="skills-category ${this.hidden ? 'deprecated' : ''}">
 						<h2>${name}</h2>
 						<ul>
 						{{each skills}}
@@ -115,6 +126,7 @@ SKILL HIGHLIGHTS{{each catalog}}
 						<div class="position-info">
 							<span class="title">${title} {{if categories}}<a class="toggle-skills" href="javascript:void(0)">skills used</a>{{/if}}</span>
 							<div class="skills-used-container curved">
+								<div class="close-command">[<a href="javascript:void(0)">x</a>]</div>
 								{{each categories}}
 									<div class="skills-category">
 										<h2>${name}</h2>

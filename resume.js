@@ -33,7 +33,15 @@
 		});
 		$('#content').delegate('.toggle-skills', 'hover', function () {
 			var parents = $(this).parents('.position-info')
-			parents.toggleClass('show-skills');
+			parents.toggleClass('show-skills-hover');
+		});
+		$('#content').delegate('.toggle-skills', 'click', function () {
+			var parents = $(this).parents('.position-info')
+			parents.toggleClass('show-skills-click');
+		});
+		$('#content').delegate('.skills-used-container .close-command a', 'click', function () {
+			var parents = $(this).parents('.position-info')
+			parents.removeClass('show-skills-click');
 		});
 
 

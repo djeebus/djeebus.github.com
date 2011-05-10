@@ -4,14 +4,17 @@
 		"city": "Albuquerque",
 		"state": "New Mexico"
 	},
+  "links": [
+		{ "href": "http://resume.djeebus.net", "title": "latest resume" },
+    { "href": "http://blog.djeebus.net", "title": "blog" },
+    { "href": "http://linkedin.com/in/djeebus", "title": "linkedin" }
+  ],
 	"contact": [
 		{ "method": "email", "value": "joe@djeebus.net" },
 		{ "method": "cell", "value": "(714) 588-2788" },
 		{ "method": "aim", "value": "digitaljeebus" },
 		{ "method": "gtalk", "value": "digitaljeebus@gmail.com" },
-		{ "method": "skype", "value": "digitaljeebus" },
-		{ "method": "linkedin", "value": "djeebus" },
-		{ "method": "web", "value": "http://resume.djeebus.net/" }
+		{ "method": "skype", "value": "digitaljeebus" }
 	],
 	"preamble": {
 		"title": "Software Architect",
@@ -66,6 +69,7 @@
 		},
 		{
 			"name": "Methodologies",
+      "hidden": true,
 			"skills": [
 				{ "key": "agile", "name": "Agile", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
 				{ "key": "waterfall", "name": "Waterfall", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
@@ -107,6 +111,7 @@
 		},
 		{
 			"name": "Media APIs",
+      "hidden": true,
 			"skills": [
 				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" },
 				{ "key": "mdx", "name": "Managed DirectX", "href": "http://mdxinfo.com/" },
@@ -133,13 +138,13 @@
 			"name": "Professional History",
 			"experiences": [
 				{
-					"start": 2007,
+					"start": "1/2007",
 					"company": "Orchid Event Solutions",
 					"locale": "Salt Lake City, UT",
 					"description": "Provides customized registration and housing solutions for international corporate events, including data integration, payments, lead retrieval, credentials, and onsite support.",
 					"positions": [ 
 						{
-							"title": "Director of Development",
+							"title": "Senior Architect, Lead Developer, Team Lead",
 							"accomplishments": [
 								"Took 98% uptime ecosystem and moved servers to a state-of-the-art data center to achieve 99.999% uptime. Plan was executed within maintenance window and at 5% of the expected cost.",
 								"Created client-facing applications to allow low-budget clients to manage their own events, which opened a new market segment, created a new revenue stream, and reduced the workload on development staff",
@@ -181,14 +186,14 @@
 					]
 				},
 				{
-					"start": 2004,
-					"end": 2007,
+					"start": "10/2004",
+					"end": "1/2007",
 					"company": "Universal Metals",
 					"locale": "Orange, CA",
 					"description": "Leading metal supplier for southern california industries including aerospace, government, and engineering firms.",
 					"positions": [
 						{
-							"title": "Director of IT",
+							"title": "Senior Architect, Lead Developer",
 							"accomplishments": [ 
 								"Presented with a company that was lean on resources, created tools to streamline work and reduce overhead.",
 								"Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
@@ -218,8 +223,8 @@
 					]
 				},
 				{
-					"start": 2002,
-					"end": 2004,
+					"start": "3/2002",
+					"end": "10/2004",
 					"company": "All Metals Engineering",
 					"locale": "Huntington Beach, CA",
 					"description": "Government broker",
@@ -304,8 +309,7 @@
 						{
 							"title": "Cowboy coder",
 							"accomplishments": [
-								"Implemented RFC3920, RFC 3921, XEP-0012 and XEP-0092",
-								"Implemented many of the Google Talk extensions"
+								"Implemented RFC3920, RFC 3921, XEP-0012 and XEP-0092, and many of the Google Talk extensions"
 							],
 							"skillKeys": [
 								{ "key": "csharp" },
@@ -327,10 +331,7 @@
 						{
 							"title": "Cowboy coder",
 							"accomplishments": [
-								"Cross platform audio provided by FMod",
-								"Implemented GPS protocol for handling navigation",
-								"Implemented IBus protocol for communicating with supported cars (BMWs and Minis)",
-								"Implemented OBD-II protocol for car diagnostic information"
+								"Enabled a computer to react to steering wheel button presses and display track remaining info on the instrument cluster LCD"
 							],
 							"skillKeys": [
 								{ "key": "csharp" },
