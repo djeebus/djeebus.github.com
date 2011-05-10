@@ -175,6 +175,9 @@ p.description {
 .experiences .experience .position-info {
 	padding-bottom: 1em;
 }
+.experiences .experience .position-info .title {
+	font-weight: bold;
+}
 .experiences .experience .position-info .accomplishments {
 	margin-left: 2em;
 }
@@ -212,7 +215,6 @@ p.description {
 .show-skills .skills-used-container {
 	display: block;
 }
-
 @media print {
 	body {
 		color: White;
@@ -236,5 +238,25 @@ p.description {
 	}
 	.curved {
 		border: 0;
+		
+	}
+	.skills-used-container {
+		background-color: transparent;
+		display: block;
+		padding: 0;
+		position: static;
+	}
+	.skills-used-container .skills-category h2 {
+		clear: left;
+		display: block;
+		float: left;
+		font-size: 1em;
+		font-weight: normal;
+		text-align: left;
+		width: 10em;
+	}
+	.skills-used-container .skill-use {
+		padding: 0 .5em 0 0;
+		border-left-width: 0;
 	}
 }

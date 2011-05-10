@@ -102,7 +102,7 @@
 			var escapedXml = xml.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 			// render xml in <pre /> tag to preserve spacing
-			content.html('<pre>' + escapedXml +'</pre>');
+			content.html('<pre>' + escapedXml + '</pre>');
 		} else {
 			// all other templates are simply jquery.tmpl templates
 			var template = $.tmpl(templateName, myResume)
@@ -124,6 +124,7 @@
 	function buildViewModel(resume) {
 		var skillsCatalog = resume.catalog;
 
+		// utility function for finding full skill information
 		skillsCatalog.findSkill = function (key) {
 			for (var x = 0; x < this.length; x++) {
 				var category = this[x];

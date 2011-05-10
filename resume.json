@@ -10,7 +10,8 @@
 		{ "method": "aim", "value": "digitaljeebus" },
 		{ "method": "gtalk", "value": "digitaljeebus@gmail.com" },
 		{ "method": "skype", "value": "digitaljeebus" },
-		{ "method": "linkedin", "value": "djeebus" }
+		{ "method": "linkedin", "value": "djeebus" },
+		{ "method": "web", "value": "http://resume.djeebus.net/" }
 	],
 	"preamble": {
 		"title": "Software Architect",
