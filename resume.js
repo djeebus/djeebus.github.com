@@ -25,21 +25,22 @@
 		});
 
 		reportMessage('Binding commands ... ');
+
+		// make template links hyperlinks
 		$('a[template-name]').each(function () {
 			var a = $(this)
 			var templateName = a.attr('template-name');
 			a.attr('href', '?template=' + templateName);
 			a.html(templateName);
 		});
+
+		// each template link will refresh the content via ajax
 		$('a[template-name]').click(function () {
 			var a = $(this)
-
 			var templateName = a.attr('template-name');
-
-			a.attr('href', 'javascript:void(0)');
-			a.html(templateName);
-
 			buildResumeUi(templateName);
+
+			return false;
 		});
 		$('#content').delegate('.toggle-skills', 'hover', function () {
 			var parents = $(this).parents('.position-info')
