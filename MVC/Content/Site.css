@@ -115,10 +115,10 @@ p.description {
 	clear: both;
 }
 .preamble ul {
-	list-style-type: circle;
 	height: 4em; /* hack: couldn't figure out how to get the ul to have a height AND let <li /> elements float */
 }
 .preamble ul li {
+	list-style-type: circle;
 	width: 26em;
 	margin-left: 2em;
 	float: left;

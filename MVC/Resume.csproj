@@ -72,6 +72,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\RenderController.cs" />
+    <Compile Include="Converters\Docx\DocxResumeConverter.cs" />
+    <Compile Include="Converters\Html\HtmlResumeConverter.cs" />
+    <Compile Include="Converters\IResumeConverter.cs" />
+    <Compile Include="Converters\IXmlResumeConverter.cs" />
+    <Compile Include="Converters\ResumeConversionFactory.cs" />
+    <Compile Include="Converters\ResumeConverterAttribute.cs" />
+    <Compile Include="Converters\Txt\TextResumeConverter.cs" />
+    <Compile Include="Converters\XsltResumeConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

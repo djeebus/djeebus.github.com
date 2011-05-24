@@ -30,7 +30,7 @@
 		$('a[template-name]').each(function () {
 			var a = $(this)
 			var templateName = a.attr('template-name');
-			a.attr('href', '?template=' + templateName);
+			a.attr('href', '/render/to/' + templateName);
 			a.html(templateName);
 		});
 
@@ -60,7 +60,7 @@
 		reportMessage('Fetching resume ... ');
 		$.ajax({
 			type: "GET",
-			url: "/render/tojson",
+			url: "/render/to/json",
 			dataType: "json",
 			cache: false,
 			success: function (data) {

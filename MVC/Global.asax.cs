@@ -35,6 +35,11 @@ namespace Resume
 				new { controller = "Render", action = "Index" } // Parameter defaults
 			);
 
+			routes.MapRoute(
+				"Generic render route",
+				"{controller}/to/{format}",
+				new { controller = "Render", action = "Generic" }
+			);
 		}
 
 		protected void Application_Start()

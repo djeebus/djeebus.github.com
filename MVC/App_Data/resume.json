@@ -102,7 +102,7 @@
 		{
 			"name": "Web APIs",
 			"skills": [
-				{ "key": "exchangewebdav", "name": "Exchange 2003 Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
+				{ "key": "exchangewebdav", "name": "Exchange Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
 				{ "key": "facebook", "name": "Facebook", "href": "http://developers.facebook.com/", "important": true },
 				{ "key": "gcontacts", "name": "Google Contacts", "href": "http://code.google.com/apis/contacts/" },
 				{ "key": "gtalk", "name": "Google Talk", "href": "http://code.google.com/apis/talk/" },
