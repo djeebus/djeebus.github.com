@@ -13,14 +13,14 @@ namespace Resume.Converters
 
 		protected XsltResumeConverter()
 		{
-		}
-
-		public void WriteToStream(XmlDocument resume, Stream outputStream)
-		{
 			string fullpath = HttpContext.Current.Server.MapPath(this.XsltFilename);
 
 			transformer = new XslCompiledTransform(false);
 			transformer.Load(fullpath);
+		}
+
+		public void WriteToStream(XmlDocument resume, Stream outputStream)
+		{
 
 			this.transformer.Transform(resume, null, outputStream);
 		}

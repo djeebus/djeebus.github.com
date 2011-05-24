@@ -5,7 +5,7 @@
 >
 	<xsl:output method="html" indent="yes" />
 
-	<xsl:template match="/root">
+	<xsl:template match="/resume">
 		<html>
 			<head>
 				<title>

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Resume.Converters.Txt
 {
-	[ResumeConverter("txt", "Plain Text", "text/plain")]
+	[ResumeConverter("text", "Plain Text", "text/plain")]
 	public class TextResumeConverter : XsltResumeConverter
 	{
 		public override string XsltFilename

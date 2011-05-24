@@ -29,9 +29,6 @@ namespace Resume.Controllers
 				case "json":
 					return this.File("~/App_Data/resume.json", "application/json");
 
-				case "xml":
-					return this.Content(ResumeConversionFactory.GetXmlDocument().OuterXml, "text/xml");
-
 				default:
 					return ResumeConversionFactory.ConvertResume(format);
 			}

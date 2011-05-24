@@ -7,31 +7,7 @@
 	<xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'" />
 	<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
 
-	<!--
-${developer.name}
-${developer.city}, ${developer.state}
-{{each contact}}
-${method}: ${value}{{/each}}
-
-${preamble.title.toUpperCase()}
-${preamble.content}
-
-AREAS OF EXPERTISE{{each expertise}}
-  * ${this}{{/each}}
-
-SKILL HIGHLIGHTS{{each catalog}}
-  ${name.toUpperCase()}: {{each skills}}{{if !(typeof hidden == 'undefined' ? false : hidden)}}{{if $index > 0}} | {{/if}}${name}{{/if}}{{/each}}{{/each}}
-
-{{each experienceTypes}}${name.toUpperCase()}
-{{each experiences}}
-  ${company.toUpperCase()} {{if timespan}}(${timespan}){{/if}}{{if locale}} ${locale}{{/if}}
-{{if description}}  ${description}{{/if}}
-{{each positions}}  ${title}{{if details}}
-    ${details}{{/if}}
-{{each accomplishments}}    * ${this}
-{{/each}}{{/each}}{{/each}}
-{{/each}}	-->
-	<xsl:template match="/root">
+	<xsl:template match="/resume">
 
 		<!-- name information -->
 		<xsl:for-each select="developer">

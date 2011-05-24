@@ -46,7 +46,7 @@ namespace Resume.Converters
 		{
 			var json = GetJson();
 
-			string content = string.Format("{{\"root\": {0} }}", json);
+			string content = string.Format("{{\"resume\": {0} }}", json);
 
 			var doc = JsonConvert.DeserializeXmlNode(content);
 
@@ -60,12 +60,22 @@ namespace Resume.Converters
 
 		public static ActionResult ConvertResume(string format)
 		{
+			if (string.IsNullOrEmpty(format))
+				throw new ArgumentNullException("format");
+
 			var conversionInfo = converters[format];
 			if (conversionInfo == null)
-				throw new ArgumentOutOfRangeException("format");
+				throw new ArgumentOutOfRangeException("format", format, "Unknown format");
 
 			var ms = new MemoryStream();
 
+			ConvertResumeToStream(conversionInfo, ms);
+
+			return ConvertStreamToActionResult(conversionInfo, ms);
+		}
+
+		private static void ConvertResumeToStream(ConversionInfo conversionInfo, MemoryStream ms)
+		{
 			if (conversionInfo.Converter is IResumeConverter)
 			{
 				var conv = (IResumeConverter)conversionInfo.Converter;
@@ -78,7 +88,10 @@ namespace Resume.Converters
 
 				conv.WriteToStream(GetXmlDocument(), ms);
 			}
+		}
 
+		private static ActionResult ConvertStreamToActionResult(ConversionInfo conversionInfo, MemoryStream ms)
+		{
 			ms.Position = 0;
 
 			var mimeType = conversionInfo.Metadata.MimeType;

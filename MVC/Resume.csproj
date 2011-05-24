@@ -79,6 +79,7 @@
     <Compile Include="Converters\ResumeConversionFactory.cs" />
     <Compile Include="Converters\ResumeConverterAttribute.cs" />
     <Compile Include="Converters\Txt\TextResumeConverter.cs" />
+    <Compile Include="Converters\Xml\XmlResumeConverter.cs" />
     <Compile Include="Converters\XsltResumeConverter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -88,7 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\resume2html.xslt" />
+    <Content Include="App_Data\resume2html.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\jquery.json2xml.js" />
     <Content Include="Content\jquery.tmpl.js" />
     <Content Include="Content\resume.js" />
