@@ -1,380 +1,841 @@
 {
-	"developer": {
-		"name": "Joseph Lombrozo",
-		"city": "Albuquerque",
-		"state": "New Mexico"
-	},
+  "developer": {
+    "name": "Joseph Lombrozo",
+    "city": "San Francisco",
+    "state": "California"
+  },
   "links": [
-		{ "href": "http://resume.djeebus.net", "title": "latest resume" },
-    { "href": "http://blog.djeebus.net", "title": "blog" },
-    { "href": "http://linkedin.com/in/djeebus", "title": "linkedin" }
+    {
+      "href": "http://resume.djeebus.net",
+      "title": "latest resume"
+    },
+    {
+      "href": "http://blog.djeebus.net",
+      "title": "blog"
+    },
+    {
+      "href": "http://linkedin.com/in/djeebus",
+      "title": "linkedin"
+    }
   ],
-	"contact": [
-		{ "method": "email", "value": "joe@djeebus.net" },
-		{ "method": "cell", "value": "(714) 588-2788" },
-		{ "method": "aim", "value": "digitaljeebus" },
-		{ "method": "gtalk", "value": "digitaljeebus@gmail.com" },
-		{ "method": "skype", "value": "digitaljeebus" }
-	],
-	"preamble": {
-		"title": "Software Architect",
-		"content": "Innovative and resourceful lead architect with 10 years of experience in transforming legacy software into easily maintainable, flexible and functional frameworks and applications. Recognized for ability to seek and capitilize on opportunities for new revenue streams for small businesses in various industries. Strong track record of meeting deadlines and exceeding customer expectations in short timeframes."
-	},
-	"expertise": [
-		"Team development and mentoring",
-		"Cross-functional coordination",
-		"Architecting large-scale software projects",
-		"3rd party service and module integration",
-		"Easily-maintainable and efficient code",
-		"Legacy software transformation"
-	],
-	"catalog": [
-		{
-			"name": "Languages",
-			"skills": [
-				{ "key": "csharp", "name": "C#", "href": "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)", "important": true },
-				{ "key": "javascript", "name": "JavaScript", "href": "http://en.wikipedia.org/wiki/JavaScript", "important": true },
-				{ "key": "xml", "name": "XML", "href": "http://en.wikipedia.org/wiki/XML", "important": true },
-				{ "key": "xaml", "name": "XAML", "href": "http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language" },
-				{ "key": "xslt", "name": "XSLT", "href": "http://en.wikipedia.org/wiki/XSLT" },
-				{ "key": "xpath", "name": "XPath", "href": "http://en.wikipedia.org/wiki/XPath" },
-				{ "key": "xquery", "name": "XQuery", "href": "http://www.w3schools.com/xquery/default.asp" },
-				{ "key": "cpp", "name": "C++", "href": "http://en.wikipedia.org/wiki/C++", "hidden": true },
-				{ "key": "vba", "name": "VBA", "href": "http://en.wikipedia.org/wiki/Visual_Basic_for_Applications", "hidden": true },
-				{ "key": "vbnet", "name": "VB.NET", "href": "http://en.wikipedia.org/wiki/Visual_Basic_.NET", "hidden": true }
-			]
-		},
-		{
-			"name": "Web Frameworks",
-			"skills": [
-				{ "key": "aspnet", "name": "ASP.NET", "href": "http://www.asp.net/" },
-				{ "key": "aspnetmvc3", "name": "ASP.NET MVC 3", "href": "http://www.asp.net/mvc", "important": true },
-				{ "key": "wcf", "name": "WCF" },
-				{ "key": "jquery", "name": "jQuery", "href": "http://jquery.com", "important": true },
-				{ "key": "msajax", "name": "Microsoft Ajax Library", "hidden": true }
-			]
-		},
-		{
-			"name": "Frameworks",
-			"skills": [
-				{ "key": "dotnet20", "name": ".NET 2-4", "href": "http://www.microsoft.com/net/", "important": true },
-				{ "key": "ef", "name": "Entity Framework", "href": "http://msdn.microsoft.com/en-us/library/aa697427(v=vs.80).aspx", "important": true },
-				{ "key": "efcf", "name": "EF CodeFirst", "href": "http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx" },
-				{ "key": "winforms", "name": "Windows Forms" },
-				{ "key": "wpf", "name": "WPF", "href": "http://msdn.microsoft.com/en-us/library/ms754130.aspx", "important": true },
-
-				{ "key": "dotnet11", "name": ".NET 1.1", "href": "http://www.microsoft.com/net/", "hidden": true },
-				{ "key": "mfc", "name": "Microsoft Foundation Classes", "hidden": true }
-			]
-		},
-		{
-			"name": "Methodologies",
+  "contact": [
+    {
+      "method": "email",
+      "value": "joe@djeebus.net"
+    },
+    {
+      "method": "cell",
+      "value": "(714) 588-2788"
+    },
+    {
+      "method": "aim",
+      "value": "digitaljeebus"
+    },
+    {
+      "method": "gtalk",
+      "value": "digitaljeebus@gmail.com"
+    },
+    {
+      "method": "skype",
+      "value": "digitaljeebus"
+    }
+  ],
+  "preamble": {
+    "title": "Senior Software Engineer",
+    "content": "Innovative and resourceful lead architect with 10 years of experience in transforming legacy software into easily maintainable, flexible and functional frameworks and applications. Recognized for ability to seek and capitilize on opportunities for new revenue streams for small businesses in various industries. Strong track record of meeting deadlines and exceeding customer expectations in short timeframes."
+  },
+  "expertise": [
+    "Team development and mentoring",
+    "Cross-functional coordination",
+    "Architecting large-scale software projects",
+    "3rd party service and module integration",
+    "Easily-maintainable and efficient code",
+    "Legacy software transformation"
+  ],
+  "catalog": [
+    {
+      "name": "Languages",
+      "skills": [
+        {
+          "key": "csharp",
+          "name": "C#",
+          "href": "http://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+          "important": true
+        },
+        {
+          "key": "javascript",
+          "name": "JavaScript",
+          "href": "http://en.wikipedia.org/wiki/JavaScript",
+          "important": true
+        },
+        {
+          "key": "xml",
+          "name": "XML",
+          "href": "http://en.wikipedia.org/wiki/XML",
+          "important": true
+        },
+        {
+          "key": "xaml",
+          "name": "XAML",
+          "href": "http://en.wikipedia.org/wiki/Extensible_Application_Markup_Language"
+        },
+        {
+          "key": "xslt",
+          "name": "XSLT",
+          "href": "http://en.wikipedia.org/wiki/XSLT"
+        },
+        {
+          "key": "xpath",
+          "name": "XPath",
+          "href": "http://en.wikipedia.org/wiki/XPath"
+        },
+        {
+          "key": "xquery",
+          "name": "XQuery",
+          "href": "http://www.w3schools.com/xquery/default.asp"
+        },
+        {
+          "key": "cpp",
+          "name": "C++",
+          "href": "http://en.wikipedia.org/wiki/C++",
+          "hidden": true
+        },
+        {
+          "key": "vba",
+          "name": "VBA",
+          "href": "http://en.wikipedia.org/wiki/Visual_Basic_for_Applications",
+          "hidden": true
+        },
+        {
+          "key": "vbnet",
+          "name": "VB.NET",
+          "href": "http://en.wikipedia.org/wiki/Visual_Basic_.NET",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "name": "Web Frameworks",
+      "skills": [
+        {
+          "key": "aspnet",
+          "name": "ASP.NET",
+          "href": "http://www.asp.net/"
+        },
+        {
+          "key": "aspnetmvc3",
+          "name": "ASP.NET MVC 3",
+          "href": "http://www.asp.net/mvc",
+          "important": true
+        },
+        {
+          "key": "wcf",
+          "name": "WCF"
+        },
+        {
+          "key": "jquery",
+          "name": "jQuery",
+          "href": "http://jquery.com",
+          "important": true
+        },
+        {
+          "key": "msajax",
+          "name": "Microsoft Ajax Library",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "skills": [
+        {
+          "key": "dotnet20",
+          "name": ".NET 2-4",
+          "href": "http://www.microsoft.com/net/",
+          "important": true
+        },
+        {
+          "key": "ef",
+          "name": "Entity Framework",
+          "href": "http://msdn.microsoft.com/en-us/library/aa697427(v=vs.80).aspx",
+          "important": true
+        },
+        {
+          "key": "efcf",
+          "name": "EF CodeFirst",
+          "href": "http://weblogs.asp.net/scottgu/archive/2010/07/16/code-first-development-with-entity-framework-4.aspx"
+        },
+        {
+          "key": "winforms",
+          "name": "Windows Forms"
+        },
+        {
+          "key": "wpf",
+          "name": "WPF",
+          "href": "http://msdn.microsoft.com/en-us/library/ms754130.aspx",
+          "important": true
+        },
+        {
+          "key": "dotnet11",
+          "name": ".NET 1.1",
+          "href": "http://www.microsoft.com/net/",
+          "hidden": true
+        },
+        {
+          "key": "mfc",
+          "name": "Microsoft Foundation Classes",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "name": "Methodologies",
       "hidden": true,
-			"skills": [
-				{ "key": "agile", "name": "Agile", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
-				{ "key": "waterfall", "name": "Waterfall", "href": "http://en.wikipedia.org/wiki/Agile_software_development" },
-				{ "key": "scrum", "name": "Scrum", "href": "http://en.wikipedia.org/wiki/Scrum_%28development%29" },
-				{ "key": "cowboy", "name": "Cowboy Coding", "href": "http://en.wikipedia.org/wiki/Cowboy_coding", "hidden": true }
-			]
-		},
-		{
-			"name": "Protocols",
-			"skills": [
-				{ "key": "tcp", "name": "TCP" },
-				{ "key": "udp", "name": "UDP" },
-				{ "key": "upnp", "name": "UPnP", "href": "http://en.wikipedia.org/wiki/Universal_Plug_and_Play" },
-				{ "key": "xmpp", "name": "XMPP (Jabber)", "href": "http://jabber.org" },
-				{ "key": "gps", "name": "NMEA 0183 (GPS)", "href": "http://en.wikipedia.org/wiki/NMEA_0183" },
-				{ "key": "ibus", "name": "IBus", "href": "http://www.jaroslavklima.com/blog/2009/01/mirror-of-httpwwwopenbmworgbus.html" },
-				{ "key": "obd2", "name": "Onboard Diagnostics II", "href": "http://en.wikipedia.org/wiki/On-board_diagnostics" }
-			]
-		},
-		{
-			"name": "Payment APIs",
-			"skills": [
-				{ "key": "authorizenet", "name": "Authorize.Net", "href": "http://www.authorize.net" },
-				{ "key": "braintree", "name": "Braintree", "href": "http://www.braintreepaymentsolutionscom" },
-				{ "key": "cybersource", "name": "Cybersource", "href": "http://www.cybersource.com"},
-				{ "key": "paypalwpp", "name": "PayPal Website Payments Pro", "href": "https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content&content_ID=merchant/wp_pro" },
-				{ "key": "payflowpro", "name": "PayPal Payflow Pro", "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside" }
-			]
-		},
-		{
-			"name": "Web APIs",
-			"skills": [
-				{ "key": "exchangewebdav", "name": "Exchange 2003 Store WebDAV", "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx" },
-				{ "key": "facebook", "name": "Facebook", "href": "http://developers.facebook.com/", "important": true },
-				{ "key": "gcontacts", "name": "Google Contacts", "href": "http://code.google.com/apis/contacts/" },
-				{ "key": "gtalk", "name": "Google Talk", "href": "http://code.google.com/apis/talk/" },
-				{ "key": "gmaps", "name": "Google Maps", "href": "http://code.google.com/apis/maps/" }
-			]
-		},
-		{
-			"name": "Media APIs",
+      "skills": [
+        {
+          "key": "agile",
+          "name": "Agile",
+          "href": "http://en.wikipedia.org/wiki/Agile_software_development"
+        },
+        {
+          "key": "waterfall",
+          "name": "Waterfall",
+          "href": "http://en.wikipedia.org/wiki/Agile_software_development"
+        },
+        {
+          "key": "scrum",
+          "name": "Scrum",
+          "href": "http://en.wikipedia.org/wiki/Scrum_%28development%29"
+        },
+        {
+          "key": "cowboy",
+          "name": "Cowboy Coding",
+          "href": "http://en.wikipedia.org/wiki/Cowboy_coding",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "name": "Protocols",
+      "skills": [
+        {
+          "key": "tcp",
+          "name": "TCP"
+        },
+        {
+          "key": "udp",
+          "name": "UDP"
+        },
+        {
+          "key": "upnp",
+          "name": "UPnP",
+          "href": "http://en.wikipedia.org/wiki/Universal_Plug_and_Play"
+        },
+        {
+          "key": "xmpp",
+          "name": "XMPP (Jabber)",
+          "href": "http://jabber.org"
+        },
+        {
+          "key": "gps",
+          "name": "NMEA 0183 (GPS)",
+          "href": "http://en.wikipedia.org/wiki/NMEA_0183"
+        },
+        {
+          "key": "ibus",
+          "name": "IBus",
+          "href": "http://www.jaroslavklima.com/blog/2009/01/mirror-of-httpwwwopenbmworgbus.html"
+        },
+        {
+          "key": "obd2",
+          "name": "Onboard Diagnostics II",
+          "href": "http://en.wikipedia.org/wiki/On-board_diagnostics"
+        }
+      ]
+    },
+    {
+      "name": "Payment APIs",
+      "skills": [
+        {
+          "key": "authorizenet",
+          "name": "Authorize.Net",
+          "href": "http://www.authorize.net"
+        },
+        {
+          "key": "braintree",
+          "name": "Braintree",
+          "href": "http://www.braintreepaymentsolutionscom"
+        },
+        {
+          "key": "cybersource",
+          "name": "Cybersource",
+          "href": "http://www.cybersource.com"
+        },
+        {
+          "key": "paypalwpp",
+          "name": "PayPal Website Payments Pro",
+          "href": "https://merchant.paypal.com/cgi-bin/marketingweb?cmd=_render-content&content_ID=merchant/wp_pro"
+        },
+        {
+          "key": "payflowpro",
+          "name": "PayPal Payflow Pro",
+          "href": "https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside"
+        }
+      ]
+    },
+    {
+      "name": "Web APIs",
+      "skills": [
+        {
+          "key": "exchangewebdav",
+          "name": "Exchange 2003 Store WebDAV",
+          "href": "http://msdn.microsoft.com/en-us/library/aa143161(v=EXCHG.65).aspx"
+        },
+        {
+          "key": "facebook",
+          "name": "Facebook",
+          "href": "http://developers.facebook.com/",
+          "important": true
+        },
+        {
+          "key": "gcontacts",
+          "name": "Google Contacts",
+          "href": "http://code.google.com/apis/contacts/"
+        },
+        {
+          "key": "gtalk",
+          "name": "Google Talk",
+          "href": "http://code.google.com/apis/talk/"
+        },
+        {
+          "key": "gmaps",
+          "name": "Google Maps",
+          "href": "http://code.google.com/apis/maps/"
+        }
+      ]
+    },
+    {
+      "name": "Media APIs",
       "hidden": true,
-			"skills": [
-				{ "key": "fmod", "name": "FMOD", "href": "http://www.fmod.org" },
-				{ "key": "mdx", "name": "Managed DirectX", "href": "http://mdxinfo.com/" },
-				{ "key": "opengl", "name": "OpenGL", "href": "http://www.opengl.org/" },
-				{ "key": "xna", "name": "XNA", "href": "http://msdn.microsoft.com/en-us/aa937791" }
-			]
-		},
-		{
-			"name": "Software",
-			"skills": [
-				{ "key": "vsdotnet", "name": "Visual Studio 2005-2010", "important": true },
-				{ "key": "mssql", "name": "SQL Server 2000-2008", "important": true  },
-				{ "key": "sqlce4", "name": "SQL CE 4.0" },
-				{ "key": "ccnet", "name": "CruiseControl.NET", "href": "http://sourceforge.net/projects/ccnet/" },
-				{ "key": "fogbugz", "name": "Fogbugz", "href": "http://www.fogcreek.com/fogbugz/" },
-
-				{ "key": "access2003", "name": "Access 2003", "hidden": true },
-				{ "key": "vs6", "name": "Visual Studio 6", "hidden": true }
-			]
-		}
-	],
-	"experienceTypes": [
-		{
-			"name": "Professional History",
-			"experiences": [
-				{
-					"start": "1/2007",
-					"company": "Orchid Event Solutions",
-					"locale": "Salt Lake City, UT",
-					"description": "Provides customized registration and housing solutions for international corporate events, including data integration, payments, lead retrieval, credentials, and onsite support.",
-					"positions": [ 
-						{
-							"title": "Senior Architect, Lead Developer, Team Lead",
-							"accomplishments": [
-								"Took 98% uptime ecosystem and moved servers to a state-of-the-art data center to achieve 99.999% uptime. Plan was executed within maintenance window and at 5% of the expected cost.",
-								"Created client-facing applications to allow low-budget clients to manage their own events, which opened a new market segment, created a new revenue stream, and reduced the workload on development staff",
-								"Found unencrypted client data (including credit cards and social security numbers) and researched and implemented PCI standards using state-of-the-art encryption methods to protect",
-								"Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems and revenue leakage"
-							],
-							"skillKeys": [
-								{ "key": "ccnet" },
-								{ "key": "agile" },
-								{ "key": "scrum" },
-								{ "key": "fogbugz" },
-								{ "key": "csharp" },
-								{ "key": "vbnet" },
-								{ "key": "dotnet11" },
-								{ "key": "dotnet20" },
-								{ "key": "aspnet" },
-								{ "key": "ef" },
-								{ "key": "javascript" },
-								{ "key": "jquery" },
-								{ "key": "msajax" },
-								{ "key": "mssql" },
-								{ "key": "sqlce4" },
-								{ "key": "vsdotnet" },
-								{ "key": "wpf" },
-								{ "key": "wcf" },
-								{ "key": "xaml" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "xquery" },
-								{ "key": "xslt" },
-								{ "key": "authorizenet" },
-								{ "key": "payflowpro" },
-								{ "key": "aspnetmvc3" },
-								{ "key": "efcf" },
-								{ "key": "paypalwpp" },
-								{ "key": "braintree" }
-							]
-						}
-					]
-				},
-				{
-					"start": "10/2004",
-					"end": "1/2007",
-					"company": "Universal Metals",
-					"locale": "Orange, CA",
-					"description": "Leading metal supplier for southern california industries including aerospace, government, and engineering firms.",
-					"positions": [
-						{
-							"title": "Senior Architect, Lead Developer",
-							"accomplishments": [ 
-								"Presented with a company that was lean on resources, created tools to streamline work and reduce overhead.",
-								"Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
-								"Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
-							],
-							"skillKeys": [
-								{ "key": "csharp" },
-								{ "key": "javascript" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "dotnet20" },
-								{ "key": "aspnet" },
-								{ "key": "winforms" },
-								{ "key": "msajax" },
-								{ "key": "jquery" },
-								{ "key": "mdx" },
-								{ "key": "xna" },
-								{ "key": "vsdotnet" },
-								{ "key": "mssql" },
-								{ "key": "cpp" },
-								{ "key": "opengl" },
-								{ "key": "mfc" },
-								{ "key": "vs6" },
-								{ "key": "xslt" }
-							]
-						}
-					]
-				},
-				{
-					"start": "3/2002",
-					"end": "10/2004",
-					"company": "All Metals Engineering",
-					"locale": "Huntington Beach, CA",
-					"description": "Government broker",
-					"positions": [
-						{
-							"title": "Cowboy coder",
-							"accomplishments": [
-								"Updated the employees from type-writers and cardboard boxes to the 21st century",
-								"Reduced employees' work load from 10 hours a day to an hour of responding to automated emails and fax responses."
-							],
-							"skillKeys": [
-								{ "key": "cpp" },
-								{ "key": "vba" },
-								{ "key": "access2003" }
-							]
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "Additional Experience", 
-			"experiences": [
-				{
-					"company": "MyHorseplayer.com",
-					"locale": "Orange, CA",
-					"description": "Hosted service that aided thoroughbred handicappers with calculating statistics.",
-					"positions": [
-						{
-							"title": "Chief Information Officer and Lead Architect",
-							"accomplishments": [
-								"Started a new company, gathered funding and generated community interest.",
-								"Optimized a sql database to generate complicated statistics that mined data from over 15 years of handicapping data and 2.5 million races."
-							],
-							"skillKeys": [
-								{ "key": "aspnet" },
-								{ "key": "cpp" },
-								{ "key": "csharp" },
-								{ "key": "dotnet11" },
-								{ "key": "dotnet20" },
-								{ "key": "javascript" },
-								{ "key": "msajax" },
-								{ "key": "mfc" },
-								{ "key": "mssql" },
-								{ "key": "vsdotnet" },
-								{ "key": "xml" },
-								{ "key": "xslt" },
-								{ "key": "xpath" }
-							]
-						}
-					]
-				},
-				{
-					"company": "Social event site",
-					"description": "Designed to connect people with events they would be interested in",
-					"positions": [
-						{
-							"title": "Cowboy coder",
-							"skillKeys": [
-								{ "key": "csharp" },
-								{ "key": "javascript" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "aspnet" },
-								{ "key": "aspnetmvc3" },
-								{ "key": "ef" },
-								{ "key": "efcf" },
-								{ "key": "jquery" },
-								{ "key": "facebook" },
-								{ "key": "gmaps" },
-								{ "key": "vsdotnet" },
-								{ "key": "mssql" },
-								{ "key": "sqlce4" }
-							]
-						}
-					]
-				},
-				{
-					"company": "XmppSharp",
-					"description": "Native .NET library for connecting and communicating with jabber/xmpp servers",
-					"positions": [
-						{
-							"title": "Cowboy coder",
-							"accomplishments": [
-								"Implemented RFC3920, RFC 3921, XEP-0012 and XEP-0092, and many of the Google Talk extensions"
-							],
-							"skillKeys": [
-								{ "key": "csharp" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "dotnet20" },
-								{ "key": "tcp" },
-								{ "key": "xmpp" },
-								{ "key": "gtalk" },
-								{ "key": "vsdotnet" }
-							]
-						}
-					]
-				},
-				{
-					"company": "RoadUI",
-					"description": "Touchscreen interface for a car computer",
-					"positions": [
-						{
-							"title": "Cowboy coder",
-							"accomplishments": [
-								"Enabled a computer to react to steering wheel button presses and display track remaining info on the instrument cluster LCD"
-							],
-							"skillKeys": [
-								{ "key": "csharp" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "dotnet20" },
-								{ "key": "wpf" },
-								{ "key": "wcf" },
-								{ "key": "gps" },
-								{ "key": "ibus" },
-								{ "key": "obd2" },
-								{ "key": "fmod" },
-								{ "key": "vsdotnet" }
-							]
-						}
-					]
-				},
-				{
-					"company": "ContactSync",
-					"description": "A library for synchronizing contact information between 3rd party APIs.",
-					"positions": [
-						{
-							"title": "Cowboy coder",
-							"accomplishments": [
-								"Interfaced with 3rd party web services including facebook, exchange, and google contacts"
-							],
-							"skillKeys": [
-								{ "key": "csharp" },
-								{ "key": "xml" },
-								{ "key": "xpath" },
-								{ "key": "dotnet20" },
-								{ "key": "aspnet" },
-								{ "key": "ef" },
-								{ "key": "jquery" },
-								{ "key": "facebook" },
-								{ "key": "gcontacts" },
-								{ "key": "exchangewebdav" },
-								{ "key": "vsdotnet" }
-							]
-						}
-					]
-				}
-			]
-		}
-	]
+      "skills": [
+        {
+          "key": "fmod",
+          "name": "FMOD",
+          "href": "http://www.fmod.org"
+        },
+        {
+          "key": "mdx",
+          "name": "Managed DirectX",
+          "href": "http://mdxinfo.com/"
+        },
+        {
+          "key": "opengl",
+          "name": "OpenGL",
+          "href": "http://www.opengl.org/"
+        },
+        {
+          "key": "xna",
+          "name": "XNA",
+          "href": "http://msdn.microsoft.com/en-us/aa937791"
+        }
+      ]
+    },
+    {
+      "name": "Software",
+      "skills": [
+        {
+          "key": "vsdotnet",
+          "name": "Visual Studio 2005-2010",
+          "important": true
+        },
+        {
+          "key": "mssql",
+          "name": "SQL Server 2000-2008",
+          "important": true
+        },
+        {
+          "key": "sqlce4",
+          "name": "SQL CE 4.0"
+        },
+        {
+          "key": "ccnet",
+          "name": "CruiseControl.NET",
+          "href": "http://sourceforge.net/projects/ccnet/"
+        },
+        {
+          "key": "fogbugz",
+          "name": "Fogbugz",
+          "href": "http://www.fogcreek.com/fogbugz/"
+        },
+        {
+          "key": "access2003",
+          "name": "Access 2003",
+          "hidden": true
+        },
+        {
+          "key": "vs6",
+          "name": "Visual Studio 6",
+          "hidden": true
+        }
+      ]
+    }
+  ],
+  "experienceTypes": [
+    {
+      "name": "Professional History",
+      "experiences": [
+        {
+          "start": "1/2007",
+          "company": "Orchid Event Solutions",
+          "locale": "Salt Lake City, UT",
+          "description": "Provides customized registration and housing solutions for international corporate events, including data integration, payments, lead retrieval, credentials, and onsite support.",
+          "positions": [
+            {
+              "title": "Senior Architect, Lead Developer, Team Lead",
+              "accomplishments": [
+                "Took 98% uptime ecosystem and moved servers to a state-of-the-art data center to achieve 99.999% uptime. Plan was executed within maintenance window and at 5% of the expected cost.",
+                "Created client-facing applications to allow low-budget clients to manage their own events, which opened a new market segment, created a new revenue stream, and reduced the workload on development staff",
+                "Found unencrypted client data (including credit cards and social security numbers) and researched and implemented PCI standards using state-of-the-art encryption methods to protect",
+                "Refactored legacy processes and software in order to reduce development time of registration sites by 90% and eliminate common sources of problems and revenue leakage"
+              ],
+              "skillKeys": [
+                {
+                  "key": "ccnet"
+                },
+                {
+                  "key": "agile"
+                },
+                {
+                  "key": "scrum"
+                },
+                {
+                  "key": "fogbugz"
+                },
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "vbnet"
+                },
+                {
+                  "key": "dotnet11"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "aspnet"
+                },
+                {
+                  "key": "ef"
+                },
+                {
+                  "key": "javascript"
+                },
+                {
+                  "key": "jquery"
+                },
+                {
+                  "key": "msajax"
+                },
+                {
+                  "key": "mssql"
+                },
+                {
+                  "key": "sqlce4"
+                },
+                {
+                  "key": "vsdotnet"
+                },
+                {
+                  "key": "wpf"
+                },
+                {
+                  "key": "wcf"
+                },
+                {
+                  "key": "xaml"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "xquery"
+                },
+                {
+                  "key": "xslt"
+                },
+                {
+                  "key": "authorizenet"
+                },
+                {
+                  "key": "payflowpro"
+                },
+                {
+                  "key": "aspnetmvc3"
+                },
+                {
+                  "key": "efcf"
+                },
+                {
+                  "key": "paypalwpp"
+                },
+                {
+                  "key": "braintree"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "10/2004",
+          "end": "1/2007",
+          "company": "Universal Metals",
+          "locale": "Orange, CA",
+          "description": "Leading metal supplier for southern california industries including aerospace, government, and engineering firms.",
+          "positions": [
+            {
+              "title": "Senior Architect, Lead Developer",
+              "accomplishments": [
+                "Presented with a company that was lean on resources, created tools to streamline work and reduce overhead.",
+                "Lead a team of 4 developers to build internal and public tools and handle all technical aspects of the company.",
+                "Built a tool that allowed them to visualize cuts made to a piece of metal that could be used to verify intent."
+              ],
+              "skillKeys": [
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "javascript"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "aspnet"
+                },
+                {
+                  "key": "winforms"
+                },
+                {
+                  "key": "msajax"
+                },
+                {
+                  "key": "jquery"
+                },
+                {
+                  "key": "mdx"
+                },
+                {
+                  "key": "xna"
+                },
+                {
+                  "key": "vsdotnet"
+                },
+                {
+                  "key": "mssql"
+                },
+                {
+                  "key": "cpp"
+                },
+                {
+                  "key": "opengl"
+                },
+                {
+                  "key": "mfc"
+                },
+                {
+                  "key": "vs6"
+                },
+                {
+                  "key": "xslt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start": "3/2002",
+          "end": "10/2004",
+          "company": "All Metals Engineering",
+          "locale": "Huntington Beach, CA",
+          "description": "Government broker",
+          "positions": [
+            {
+              "title": "Cowboy coder",
+              "accomplishments": [
+                "Updated the employees from type-writers and cardboard boxes to the 21st century",
+                "Reduced employees' work load from 10 hours a day to an hour of responding to automated emails and fax responses."
+              ],
+              "skillKeys": [
+                {
+                  "key": "cpp"
+                },
+                {
+                  "key": "vba"
+                },
+                {
+                  "key": "access2003"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Additional Experience",
+      "experiences": [
+        {
+          "company": "MyHorseplayer.com",
+          "locale": "Orange, CA",
+          "description": "Hosted service that aided thoroughbred handicappers with calculating statistics.",
+          "positions": [
+            {
+              "title": "Chief Information Officer and Lead Architect",
+              "accomplishments": [
+                "Started a new company, gathered funding and generated community interest.",
+                "Optimized a sql database to generate complicated statistics that mined data from over 15 years of handicapping data and 2.5 million races."
+              ],
+              "skillKeys": [
+                {
+                  "key": "aspnet"
+                },
+                {
+                  "key": "cpp"
+                },
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "dotnet11"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "javascript"
+                },
+                {
+                  "key": "msajax"
+                },
+                {
+                  "key": "mfc"
+                },
+                {
+                  "key": "mssql"
+                },
+                {
+                  "key": "vsdotnet"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xslt"
+                },
+                {
+                  "key": "xpath"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "Social event site",
+          "description": "Designed to connect people with events they would be interested in",
+          "positions": [
+            {
+              "title": "Cowboy coder",
+              "skillKeys": [
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "javascript"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "aspnet"
+                },
+                {
+                  "key": "aspnetmvc3"
+                },
+                {
+                  "key": "ef"
+                },
+                {
+                  "key": "efcf"
+                },
+                {
+                  "key": "jquery"
+                },
+                {
+                  "key": "facebook"
+                },
+                {
+                  "key": "gmaps"
+                },
+                {
+                  "key": "vsdotnet"
+                },
+                {
+                  "key": "mssql"
+                },
+                {
+                  "key": "sqlce4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "XmppSharp",
+          "description": "Native .NET library for connecting and communicating with jabber/xmpp servers",
+          "positions": [
+            {
+              "title": "Cowboy coder",
+              "accomplishments": [
+                "Implemented RFC3920, RFC 3921, XEP-0012 and XEP-0092, and many of the Google Talk extensions"
+              ],
+              "skillKeys": [
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "tcp"
+                },
+                {
+                  "key": "xmpp"
+                },
+                {
+                  "key": "gtalk"
+                },
+                {
+                  "key": "vsdotnet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "RoadUI",
+          "description": "Touchscreen interface for a car computer",
+          "positions": [
+            {
+              "title": "Cowboy coder",
+              "accomplishments": [
+                "Enabled a computer to react to steering wheel button presses and display track remaining info on the instrument cluster LCD"
+              ],
+              "skillKeys": [
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "wpf"
+                },
+                {
+                  "key": "wcf"
+                },
+                {
+                  "key": "gps"
+                },
+                {
+                  "key": "ibus"
+                },
+                {
+                  "key": "obd2"
+                },
+                {
+                  "key": "fmod"
+                },
+                {
+                  "key": "vsdotnet"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "company": "ContactSync",
+          "description": "A library for synchronizing contact information between 3rd party APIs.",
+          "positions": [
+            {
+              "title": "Cowboy coder",
+              "accomplishments": [
+                "Interfaced with 3rd party web services including facebook, exchange, and google contacts"
+              ],
+              "skillKeys": [
+                {
+                  "key": "csharp"
+                },
+                {
+                  "key": "xml"
+                },
+                {
+                  "key": "xpath"
+                },
+                {
+                  "key": "dotnet20"
+                },
+                {
+                  "key": "aspnet"
+                },
+                {
+                  "key": "ef"
+                },
+                {
+                  "key": "jquery"
+                },
+                {
+                  "key": "facebook"
+                },
+                {
+                  "key": "gcontacts"
+                },
+                {
+                  "key": "exchangewebdav"
+                },
+                {
+                  "key": "vsdotnet"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
